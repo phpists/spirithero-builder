@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  background: #faf8fc;
+  min-height: 100vh;
+}
+.main {
+  flex: 1;
+  padding: 32px 0 0 0;
+}
+.headerRow {
+  margin-bottom: 24px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.productsRow {
+  display: flex;
+  gap: 24px;
+} 

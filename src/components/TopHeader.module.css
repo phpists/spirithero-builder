@@ -1,0 +1,87 @@
+.header {
+  background: #4b2178;
+  color: #fff;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.logo {
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+.logoYellow {
+  color: #f7c948;
+}
+.logoSub {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.stepCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: transparent;
+  color: #fff;
+}
+.stepActive {
+  background: #6c2eb7;
+  border-color: #6c2eb7;
+  color: #fff;
+}
+.stepLabel {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+.stepLabelActive {
+  color: #f7c948;
+  font-weight: 700;
+  opacity: 1;
+}
+.stepLine {
+  width: 24px;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  margin: 0 4px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 32px;
+}
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 6px 18px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.btnYellow {
+  background: #f7c948;
+  color: #4b2178;
+}
+.btnWhite {
+  background: #fff;
+  color: #4b2178;
+} 

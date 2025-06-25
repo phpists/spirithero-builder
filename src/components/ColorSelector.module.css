@@ -1,0 +1,41 @@
+.colorBox {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(44, 18, 70, 0.08);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.title {
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 1.15rem;
+}
+.desc {
+  color: #6b7280;
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+}
+.colorsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.colorLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox {
+  margin-bottom: 6px;
+}
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 4px;
+}
+.colorName {
+  font-size: 0.85rem;
+} 
