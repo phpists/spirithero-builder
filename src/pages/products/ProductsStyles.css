@@ -1,0 +1,54 @@
+.block-products{
+    background-color: #eee;
+    height: 184px;
+}
+
+.block-products h1{
+    text-transform: uppercase;
+    float: left;
+    position: relative;
+    left: 10px;
+    margin: 30px 0 30px -40px;
+    font-size: 48px;
+    font-weight: normal;
+    transform: scaleX(0.7);
+    color: #000;
+}
+
+.block-tabs {
+    width: 381px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tab-store{
+    display: flex;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    width: 141px;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 22px 22px 0 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.tab-store span{
+    border-radius: 50%;
+    outline: 1px solid gray;
+    padding: 0 6px;
+    font-size: 12px;
+}
+
+.check-icon {
+    width: 18px;
+    height: 18px;
+    stroke: #888;
+    stroke-width: 2;
+    fill: none;
+    outline: 1px solid gray;
+    border-radius: 50%;
+}
