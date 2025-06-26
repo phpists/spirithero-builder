@@ -1,7 +1,13 @@
 .block-pagination{
     padding: 0 20px;
     position: absolute;
-    top: 105%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 1000px) {
+    .block-pagination{
+        position: static;
+    }
 }

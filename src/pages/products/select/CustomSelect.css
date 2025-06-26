@@ -72,3 +72,15 @@
     padding: 1px 16px 16px;
     background: #F1EEF4;
 }
+
+@media (max-width: 800px) {
+    .block-select{
+        width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .block-custom-select{
+        display: none;
+    }
+}

@@ -9,7 +9,7 @@ import Pagination from "./pagination/Pagination";
 
 function Products() {
     const [selectedIds, setSelectedIds] = useState([]);
-    const [activeTab, setActiveTab] = useState('store');
+    const [activeTab, setActiveTab] = useState('catalog');
     const [page, setPage] = useState(1);
 
     const productGroup = [
@@ -270,7 +270,7 @@ function Products() {
                             activeTab={activeTab}
                         />
                     ))}
-                    {activeTab !== 'store' && <Pagination currentPage={page} totalPages={9} onPageChange={setPage} activeTab={activeTab} />}
+                    {/*{activeTab !== 'store' && <Pagination currentPage={page} totalPages={9} onPageChange={setPage} activeTab={activeTab} />}*/}
                 </div>
             </div>
         </div>
