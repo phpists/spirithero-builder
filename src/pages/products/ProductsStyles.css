@@ -1,4 +1,13 @@
+@font-face {
+    font-family: 'Dense';
+    src: url('../../assets/Antonio-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .block-products{
+    width: 100%;
+    margin: 0 auto;
     position: relative;
     background-color: #eee;
     height: 184px;
@@ -9,22 +18,31 @@
     float: left;
     position: relative;
     left: 10px;
-    margin: 30px 0 30px -40px;
-    font-size: 48px;
-    font-weight: normal;
-    transform: scaleX(0.7);
+    margin: 50px 0 30px 40px;
+    font-size: 36px;
+    font-family: 'Dense', sans-serif;
+    /*transform: scaleX(0.7);*/
     color: #000;
+    letter-spacing: 2px;
 }
 
+.button-close{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+/*tabs*/
 .block-tabs {
     position: absolute;
-    left: 45px;
+    left: 50px;
     bottom: 12px;
     width: 381px;
     height: 18px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .tab-store{
@@ -33,12 +51,13 @@
     align-items: center;
     align-content: space-evenly;
     justify-content: space-evenly;
-    width: 141px;
+    width: 152px;
     height: 42px;
     background-color: #fff;
     border-radius: 22px 22px 0 0;
     font-size: 14px;
     color: gray;
+    white-space: nowrap;
 }
 
 .tab-store span{
@@ -82,8 +101,8 @@
 .tab {
     padding: 12px 20px;
     border-radius: 22px 22px 0 0;
-    background: #F1EEF4;
     color: #4E008E;
+    background-color: #fff;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -93,11 +112,13 @@
 }
 
 .tab span {
-    background: #D8D3E0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #4E008E;
     font-size: 12px;
     padding: 2px 8px;
-    border-radius: 8px;
+    border-radius: 999px;
 }
 
 .tab .check-icon path {
@@ -113,10 +134,97 @@
 
 .tab.active span {
     background: #FFA500; /* оранжевий */
-    color: white;
+    color: #fff;
 }
 
 .tab.active .check-icon path {
-    stroke: white; /* або #fff */
+    stroke: #fff; /* або #fff */
 }
 
+/*actions*/
+.block-actions-products{
+    width: 100%;
+    max-width: 1600px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 50px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.block-sort-actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.block-sort-actions span{
+    margin: 0 0 0 10px;
+}
+
+.buttons-actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.button-remove{
+    cursor: pointer;
+    width: 196px;
+    padding: 10px;
+    color: #C33E36;
+    font-weight: 500;
+    border-radius: 12px;
+    outline: 1.5px solid #C33E36;
+    background-color: #FFF2F2;
+    display: flex;
+    align-items: center;
+}
+
+.button-add{
+    cursor: pointer;
+    width: 168px;
+    padding: 10px 18px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 12px;
+    background-color: #4E008E;
+    display: flex;
+    align-items: center;
+}
+
+.button-select{
+    cursor: pointer;
+    width: 99px;
+    padding: 10px 16px 10px 14px;
+    color: #000;
+    font-weight: 500;
+    border-radius: 12px;
+    outline: 2px solid #4E008E;
+    background-color: #F1EEF4;
+}
+
+/*filters products*/
+.block-filters-and-products{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.block-cards-products{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: fit-content;
+    padding: 0 10px;
+}
+
+@media (min-width: 1440px) {
+    .block-filters-and-products{
+        justify-content: center;
+    }
+}

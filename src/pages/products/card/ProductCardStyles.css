@@ -1,0 +1,101 @@
+.product-card {
+    cursor: pointer;
+    width: 208px;
+    height: 290px;
+    padding: 12px;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    transition: 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.product-card:hover .color-dots{
+    display: flex;
+}
+
+.product-card.selected {
+    border: 2px solid #4E008E;
+    border-radius: 5px;
+}
+
+.checkbox-label {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.cansel-icon{
+    position: absolute;
+    top: 12px;
+    right: 8px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #9B9AA5;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    width: 124px;
+    color: #373239;
+    font-size: 12px;
+    font-weight: bold;
+    margin: -5px auto 6px;
+}
+
+.color-dots {
+    position: absolute;
+    top: 140px;
+    left: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    display: none;
+}
+
+.color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ccc;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #373239;
+}

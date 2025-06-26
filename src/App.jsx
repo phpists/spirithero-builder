@@ -8,10 +8,12 @@ function App() {
     return (
         <BrowserRouter>
             <Header/>
-            <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/Products" element={<Products />} />
-            </Routes>
+            <div style={{maxWidth: '1600px' , margin: '0 auto'}}>
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/Products" element={<Products />} />
+                </Routes>
+            </div>
         </BrowserRouter>
     );
 }

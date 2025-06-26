@@ -1,0 +1,74 @@
+.block-select{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 288px;
+    background-color: #FCFCFC;
+    border-radius: 12px;
+    outline: 1px solid darkgrey;
+    color: #000;
+    text-align: left;
+    padding: 4px 8px;
+    margin-top: 15px;
+}
+
+.title-select{
+    font-size: 14px;
+    font-weight: 700;
+    color: #373239;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.block-select button{
+    background: none;
+    color: #000;
+    border: none;
+}
+
+.block-select-value{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 0 16px;
+}
+
+.input-select {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    appearance: none; /* прибирає дефолтне оформлення */
+    border: 2px solid #999;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.input-select:checked {
+    background-color: #0077cc;
+    border-color: #0077cc;
+}
+
+/* галочка */
+.input-select:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/*custom selects*/
+.block-custom-select{
+    width: 320px;
+    padding: 1px 16px 16px;
+    background: #F1EEF4;
+}

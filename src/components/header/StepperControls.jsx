@@ -1,6 +1,9 @@
 import './HeaderStyle.css';
+import { useNavigate } from 'react-router-dom';
 
 function StepperControls({ currentStep, setCurrentStep, totalSteps, onSaveExit }) {
+    const navigate = useNavigate();
+
     const handleNext = () => {
         if (currentStep < totalSteps) {
             setCurrentStep(currentStep + 1);
@@ -24,7 +27,10 @@ function StepperControls({ currentStep, setCurrentStep, totalSteps, onSaveExit }
                     </svg>
                     Back
                 </button>
-                <button onClick={handleNext} disabled={currentStep === totalSteps}>
+                <button onClick={() =>{
+                    navigate('/Products');
+                    handleNext();
+                }} disabled={currentStep === totalSteps}>
                     Next
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_4396_35706)">
