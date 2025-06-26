@@ -17,7 +17,7 @@ function Details() {
     ];
 
     return (
-        <div style={{ background: '#fff', padding: '96px 0 126px 0' }}>
+        <div className="block-details">
             <div className='block-store-details'>
                 <span>1. Store details</span>
                 <div className="details-form">

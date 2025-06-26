@@ -1,18 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'Dense';
+    src: url('../../assets/Antonio-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*Mаin pаge*/
-.main-page-block{
+.main-page-block {
+    position: relative;
+    height: 309px;
+    background-image: url('src/assets/babd01f0bff9b46fbc280f6d9640155dabf61483.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
+.main-page-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.main-page-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+
 .main-page-block h1{
-    font-size: 36px;
+    font-size: 48px;
     transform: scaleX(0.7);
-    letter-spacing: 1.1px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    font-weight: normal;
     font-family: 'Dense', sans-serif;
 }
 
@@ -43,6 +71,12 @@
 }
 
 /*Detаils*/
+
+.block-details{
+    background: #fff;
+    padding: 96px 0 126px 0;
+}
+
 .block-store-details{
     z-index: 1;
     width: 868px;
@@ -229,4 +263,46 @@
 
 .block-color.selected {
     outline: 2px solid #4E008E;
+}
+
+@media (max-width: 1200px) {
+    .main-page-block h1{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .block-details{
+        padding: 35px 10px 100px 10px;
+    }
+
+    .block-store-details{
+        width: 100%;
+    }
+    .block-button-logo{
+        position: relative;
+        top: -60px;
+        width: 70px;
+        height: 70px;
+        padding: 5px 0;
+        margin-top: 0;
+    }
+    .block-button-logo span{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-page-block h1{
+        font-size: 22px;
+    }
+    .block-button-next{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        float: none;
+    }
+    .block-button-next button{
+        margin: 0 auto;
+    }
 }
