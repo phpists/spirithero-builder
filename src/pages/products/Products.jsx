@@ -5,10 +5,12 @@ import Tabs from './Tabs';
 import ActionsProducts from './ActionsProducts'
 import CustomSelect from './select/CustomSelect'
 import ProductCard from "./card/ProductСard";
+import Pagination from "./pagination/Pagination";
 
 function Products() {
     const [selectedIds, setSelectedIds] = useState([]);
     const [activeTab, setActiveTab] = useState('store');
+    const [page, setPage] = useState(1);
 
     const productGroup = [
         { name: "Standard Collection", count: 68 , icon: true},
@@ -268,8 +270,8 @@ function Products() {
                             activeTab={activeTab}
                         />
                     ))}
+                    {activeTab !== 'store' && <Pagination currentPage={page} totalPages={9} onPageChange={setPage} activeTab={activeTab} />}
                 </div>
-
             </div>
         </div>
     );
