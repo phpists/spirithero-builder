@@ -5,6 +5,7 @@ import Tabs from './Tabs';
 import ActionsProducts from './ActionsProducts'
 import CustomSelect from './select/CustomSelect'
 import ProductCard from "./card/ProductСard";
+import SalePriceInfo from './sale-price-info/SalePriceInfo';
 import Pagination from "./pagination/Pagination";
 
 function Products() {
@@ -243,9 +244,10 @@ function Products() {
     };
 
     return (
-        <div>
+        <div style={{position: 'relative'}}>
             <div className='block-products'>
-                <ButtonClose />
+                {/*<ButtonClose />*/}
+                <SalePriceInfo />
                 <h1>Select your Products</h1>
                 <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
             </div>

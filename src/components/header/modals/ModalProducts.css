@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+.modal-products{
+    position: fixed;
+    top: calc(50vh - 245px);
+    left: calc(50vw - 351.5px);
+    width: 703px;
+    height: 490px;
+    background-color: #FCFCFC;
+    z-index: 9999999;
+    border-radius: 12px;
+    padding: 35px;
+    color: #000;
+    white-space: normal;
+}
+
+.modal-products h1{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Poppins-bold;
+    color: #373239;
+}
+
+.modal-products h3{
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #373239;
+}
+
+.modal-products p{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin: 20px 0;
+    font-family: Poppins-Regular;
+}
+
+.block-ul-modal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-products ul{
+    text-align: left;
+    font-weight: 700;
+}
+
+.modal-products ul{
+    font-family: Poppins-Bold;
+    white-space: nowrap;
+}
+
+.modal-products ul li{
+    margin-top: 10px;
+    text-align: left;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+    font-family: Poppins-Regular;
+    color: #47424A;
+}
+
+.modal-products a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #4E008E;
+    font-family: Poppins-Regular;
+}
+
+/*checbox*/
+.block-modal-agree{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4px 0 0;
+    text-indent: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-family: Poppins-Regular;
+}
+
+.input-modal-agree {
+    width: 12px;
+    height: 16.5px;
+    min-width: 24px;
+    min-height: 24px;
+    appearance: none;
+    border: 2px solid #999;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.input-modal-agree:checked {
+    background-color: #fff;
+}
+
+/* галочка */
+.input-modal-agree:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 7px;
+    height: 12px;
+    border: solid #4E008E;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/*buttons*/
+.modal-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.block-buttons-button-later-button-start{
+    display: flex;
+    gap: 10px;
+}
+
+.button-show{
+    cursor: pointer;
+    width: 247px;
+    height: 42px;
+    color: #fff;
+    background-color: #373239;
+    border-radius: 12px;
+    border: 1px solid #373239;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button-later{
+    cursor: pointer;
+    width: 122px;
+    height: 42px;
+    color: #373239;
+    background-color: #F1EEF4;
+    border-radius: 12px;
+    border: 1px solid #4E008E;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button-start{
+    cursor: pointer;
+    width: 170px;
+    height: 42px;
+    color: #F1EEF4;
+    background-color: #4E008E;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .modal-products{
+        width: 98%;
+        height: fit-content;
+        left: 1%;
+    }
+    .modal-products h1{
+        font-size: 20px;
+    }
+    .modal-products p{
+        font-size: 12px;
+    }
+    .modal-products ul li{
+        font-size: 12px;
+    }
+    .modal-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-show{
+        margin: 10px 0;
+    }
+}

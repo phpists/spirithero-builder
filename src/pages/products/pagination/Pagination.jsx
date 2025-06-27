@@ -101,7 +101,7 @@ const buttonStyle = {
     padding: "6px 12px",
     fontSize: "14px",
     userSelect: "none",
-    margin: 0,  // <-- прибрано всі відступи
+    margin: 0,
 };
 
 export default Pagination;

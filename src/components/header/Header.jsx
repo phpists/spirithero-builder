@@ -1,18 +1,22 @@
 import {useState} from 'react';
-import { Link } from 'react-router-dom';
 import FullStepper from './FullStepper';
 import StepperControls from './StepperControls';
 import './HeaderStyle.css';
+import './modals/ModalProducts.css';
 import stepsData from '../../data/stepsData';
+import ModalProducts from './modals/ModalProducts';
 
 function Header() {
     const totalSteps = stepsData.length;
     const [currentStep, setCurrentStep] = useState(1);
     const [completedSteps, setCompletedSteps] = useState([]);
+    const [modalProductsVisible , setModalProductsVisible] = useState(false);
 
     const onSaveExit = () => {
         console.log('📝 Saving progress and exiting...');
     };
+
+    const handleModalProductsView = () => setModalProductsVisible(!modalProductsVisible);
 
     return (
         <div className="header-block">
@@ -23,16 +27,18 @@ function Header() {
                 setCompletedSteps={setCompletedSteps}
             />
             <StepperControls
+                handleModalProductsView={handleModalProductsView}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 totalSteps={totalSteps}
                 onSaveExit={onSaveExit}
             />
-            {/*<nav>*/}
-                {/*<Link to="/">Main</Link>*/}
-                {/*<Link to="/Details">Details</Link>*/}
-                {/*<Link to="/Products">Products</Link>*/}
-            {/*</nav>*/}
+
+            {modalProductsVisible &&
+                <div className="modal-products">
+                    <ModalProducts handleModalProductsView={handleModalProductsView} />
+                </div>
+            }
         </div>
     );
 }

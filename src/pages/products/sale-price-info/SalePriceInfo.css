@@ -1,0 +1,91 @@
+.block-sale-price{
+     width: 425px;
+     position: absolute;
+     top: 40px;
+     right: 0;
+     color: #000;
+ }
+
+.block-sale-price p{
+    display: flex;
+    align-items: center;
+    padding: 0 0 5px 0;
+}
+
+.block-sale-price span{
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Контейнер перемикача */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+}
+
+/* Прихований чекбокс */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Стилі перемикача */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* Круглий повзунок */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Активний стан */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Рух повзунка при активації */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.ul-info{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+    color: #605767;
+    white-space: nowrap;
+    text-align: left;
+    padding: 0 0 0 10px;
+}
+
+@media (max-width: 800px) {
+    .block-sale-price{
+        top: 100px;
+        left: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .block-sale-price{
+        top: 100px;
+        left: 10px;
+    }
+}
