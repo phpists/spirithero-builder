@@ -44,7 +44,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
             {pages.map((page, index) =>
                 page === "..." ? (
                     <button
-                        key={index}
+                        key={`ellipsis-${index}`}
                         disabled
                         style={{
                             ...buttonStyle,

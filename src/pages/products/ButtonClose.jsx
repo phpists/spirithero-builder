@@ -5,12 +5,12 @@ function ButtonClose(){
                 <g filter="url(#filter0_i_2112_50263)">
                     <rect width="32" height="32" rx="16" fill="#FCFCFC"/>
                     <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#CACACA"/>
-                    <path d="M20 12L12 20" stroke="#605767" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 12L20 20" stroke="#47424A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 12L12 20" stroke="#605767" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 12L20 20" stroke="#47424A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </g>
                 <defs>
-                    <filter id="filter0_i_2112_50263" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <filter id="filter0_i_2112_50263" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                         <feOffset dy="-3"/>

@@ -70,7 +70,7 @@ function Details() {
 
                 <div className="block-colors">
                     {colorOptions.map((color, index) => (
-                        <div className={`block-color ${selectedColors.includes(index) ? 'selected' : ''}`}>
+                        <div key={color.name} className={`block-color ${selectedColors.includes(index) ? 'selected' : ''}`}>
                             <label className="custom-checkbox">
                                 <input
                                     type="checkbox"
