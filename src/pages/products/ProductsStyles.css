@@ -176,9 +176,10 @@
 .button-remove{
     cursor: pointer;
     width: 196px;
-    padding: 10px;
+    padding: 10px 0 10px 20px;
     color: #C33E36;
     font-weight: 500;
+    font-size: 14px;
     border-radius: 12px;
     outline: 1.5px solid #C33E36;
     background-color: #FFF2F2;
@@ -192,6 +193,7 @@
     padding: 10px 18px;
     color: #fff;
     font-weight: 400;
+    font-size: 14px;
     border-radius: 12px;
     background-color: #4E008E;
     display: flex;
@@ -204,6 +206,7 @@
     padding: 10px 16px 10px 14px;
     color: #000;
     font-weight: 500;
+    font-size: 14px;
     border-radius: 12px;
     outline: 2px solid #4E008E;
     background-color: #F1EEF4;
@@ -228,10 +231,6 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.block-pagination{
-
 }
 
 @media (min-width: 1440px) {
