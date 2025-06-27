@@ -24,7 +24,7 @@ export default function CustemSelect({data , title , iconTitle}) {
                 <span className="font-bold text-gray-800 title-select">
                     <p style={{padding: '0 5px 0 0'}}>{title}</p>
                     {iconTitle && <IconI/>}</span>
-                <button onClick={() => setExpanded(!expanded)}>
+                <button  style={{cursor: 'pointer'}} onClick={() => setExpanded(!expanded)}>
                     {expanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                 </button>
             </div>
@@ -54,6 +54,7 @@ export default function CustemSelect({data , title , iconTitle}) {
                     <button
                             onClick={() => setShowAll(!showAll)}
                             style={{
+                                cursor: 'pointer',
                                 color: "#4E008E",
                                 textDecoration: 'underline',
                                 marginLeft: '15px',

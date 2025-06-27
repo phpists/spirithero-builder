@@ -11,6 +11,7 @@ function Products() {
     const [selectedIds, setSelectedIds] = useState([]);
     const [activeTab, setActiveTab] = useState('catalog');
     const [page, setPage] = useState(1);
+    const [showFilters, setShowFilters] = useState(false);
 
     const productGroup = [
         { name: "Standard Collection", count: 68 , icon: true},
@@ -251,8 +252,15 @@ function Products() {
 
             <ActionsProducts activeTab={activeTab} />
 
+            <button
+                className="burger-button"
+                onClick={() => setShowFilters((prev) => !prev)}
+            >
+                {showFilters ? '✕' : '☰'}
+            </button>
+
             <div className="block-filters-and-products">
-                <div className="block-custom-select">
+                <div className={`block-custom-select ${showFilters ? 'show' : ''}`}>
                     <CustomSelect data={productGroup} title={'Product Group'} iconTitle={true}/>
                     <CustomSelect data={categories} title={'Categories'} iconTitle={false}/>
                     <CustomSelect data={brand} title={'Brand'} iconTitle={true}/>

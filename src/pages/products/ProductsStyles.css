@@ -32,6 +32,49 @@
     top: 20px;
     right: 20px;
 }
+
+.block-sort-actions {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.sort-selected {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+.sort-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 180px;
+    border-radius: 4px;
+}
+
+.sort-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #605767;
+    transition: background 0.2s;
+}
+
+.sort-item:hover {
+    background-color: #f0f0f0;
+}
+
+.sort-item.active {
+    font-weight: 600;
+    color: #4E008E;
+    background-color: #E6DFFF;
+}
+
 /*tabs*/
 .block-tabs {
     position: absolute;
@@ -133,7 +176,7 @@
 }
 
 .tab.active span {
-    background: #FFA500; /* оранжевий */
+    background: #FFA500;
     color: #fff;
 }
 
@@ -141,7 +184,11 @@
     stroke: #fff; /* або #fff */
 }
 
-/*actions*/
+.tab.active .check-icon{
+    background: #9569BA;
+}
+
+    /*actions*/
 .block-actions-products{
     width: 100%;
     max-width: 1600px;
@@ -254,13 +301,13 @@
 @media (max-width: 1000px) {
     .block-card-pagination{
         grid-template-columns: 1fr 1fr;
+        place-items: center;
     }
 }
 
 @media (max-width: 780px) {
-    .block-card-pagination{
-        grid-template-columns: 1fr;
-        /*place-items: center;*/
+    .block-sort-actions{
+        flex-direction: column;
     }
     .block-card-pagination{
         display: flex;
@@ -268,7 +315,37 @@
     }
 }
 
+@media (max-width: 700px) {
+    .block-actions-products{
+        flex-direction: column-reverse;
+    }
+    .count-projects{
+        margin: 20px 0 10px 0;
+    }
+    .sort-dropdown{
+        left: auto;
+    }
+}
+
 @media (max-width: 500px) {
+    .block-products{
+        display: flex;
+        justify-content: center;
+    }
+    .block-products h1{
+        font-size: 18px;
+        float: none;
+        margin: 60px 0;
+    }
+    .block-tabs{
+        width: 100%;
+        left: 0;
+        padding: 0 1%;
+    }
+    .tab{
+        font-size: 10px;
+        padding: 12px 10px;
+    }
     .block-card-pagination{
         place-items: center;
     }

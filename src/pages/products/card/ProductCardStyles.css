@@ -8,21 +8,20 @@
     background: #fff;
     transition: 0.2s ease;
     border: 1px solid transparent;
+    border-radius: 5px;
 }
 
 .product-card:hover {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     z-index: 9999;
 }
 
-.product-card:hover .color-dots{
+.product-card:hover .color-dots {
     display: flex;
 }
 
 .product-card.selected {
     border: 2px solid #4E008E;
-    border-radius: 5px;
 }
 
 .checkbox-label {
@@ -31,7 +30,7 @@
     left: 8px;
 }
 
-.cansel-icon{
+.cansel-icon {
     position: absolute;
     top: 12px;
     right: 8px;
@@ -79,12 +78,13 @@
 .color-dots {
     position: absolute;
     top: 140px;
-    left: 35px;
-    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
     justify-content: center;
+    align-items: center;
     gap: 6px;
     margin-bottom: 6px;
-    display: none;
 }
 
 .color-dot {
@@ -93,6 +93,17 @@
     border-radius: 50%;
     border: 2px solid #fff;
     box-shadow: 0 0 0 1px #ccc;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.color-dot:hover {
+    transform: scale(1.5);
+}
+
+.color-dot.active {
+    transform: scale(1.7);
+    z-index: 1;
 }
 
 .product-price {
