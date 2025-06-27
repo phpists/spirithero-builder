@@ -261,16 +261,20 @@ function Products() {
                 </div>
 
                 <div className="block-cards-products">
-                    {getProductsToDisplay().map((product) => (
-                        <ProductCard
-                            key={product.id}
-                            product={product}
-                            isChecked={selectedIds.includes(product.id)}
-                            onToggle={toggleSelect}
-                            activeTab={activeTab}
-                        />
-                    ))}
-                    {/*{activeTab !== 'store' && <Pagination currentPage={page} totalPages={9} onPageChange={setPage} activeTab={activeTab} />}*/}
+                    <div className="block-card-pagination">
+                        {getProductsToDisplay().map((product) => (
+                            <ProductCard
+                                key={product.id}
+                                product={product}
+                                isChecked={selectedIds.includes(product.id)}
+                                onToggle={toggleSelect}
+                                activeTab={activeTab}
+                            />
+                        ))}
+                    </div>
+                    <div className="block-pagination">
+                        {activeTab !== 'store' && <Pagination currentPage={page} totalPages={9} onPageChange={setPage} activeTab={activeTab} />}
+                    </div>
                 </div>
             </div>
         </div>

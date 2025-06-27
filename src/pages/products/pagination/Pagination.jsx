@@ -19,8 +19,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
     const pages = getPageNumbers();
 
     return (
-        <div
-            className="block-pagination"
+        <div className="pagination"
             style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
         >
             {/* Previous */}
