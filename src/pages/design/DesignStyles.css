@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Dense';
+    src: url('../../assets/fonts/Antonio-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*block-product*/
+.design{
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #4E008E;
+}
+
+.block-button-back{
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+}
+
+.block-product{
+    width: 50%;
+    padding: 45px 0 0 56px;
+}
+
+.block-product h1{
+    color: #4E008E;
+    font-size: 18px;
+    font-family: 'Poppins-Bold' , sans-serif;
+}
+
+/*Slider*/
+.slider-container {
+    position: relative;
+    width: 100%;
+    /*height: 655px;*/
+    margin: 25px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 12px 16px;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.block-square {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 10px;
+    width: 50%;
+    max-width: 248px;
+    height: 50%;
+    max-height: 234px;
+    border: 2px dashed #4E008E;
+}
+
+.block-square::after {
+    content: 'Printable area';
+    display: block;
+    margin-top: 240px; /* або скільки потрібно */
+    text-align: center;
+    color: #4E008E;
+    font-size: 14px;
+}
+
+.block-images {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.slider-thumbnail {
+    width: 96px;
+    height: 92px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.slider-thumbnail:hover {
+    border-color: #4E008E;
+    border-radius: 12px;
+}
+
+/*block-design*/
+.block-design{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 70px 55px;
+    background-color: #F1EEF4;
+}
+.block-design button{
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 56px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 234px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: #4E008E;
+    font-size: 14px;
+}
+.block-design h1{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: left;
+    font-family: 'Dense' , sans-serif;
+}
+.block-design p{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    text-indent: 5px;
+    color: #605767;
+    letter-spacing: 1px;
+}
+
+/*buttons design*/
+.actions-design{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.design-button{
+    white-space: nowrap;
+    cursor: pointer;
+    color: #373239;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-indent: 5px;
+    border: .5px solid #CACACA;
+    border-radius: 12px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 16px;
+}
+
+@media (max-width: 1200px) {
+    .actions-design{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .design-button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .block-product{
+        width: 100%;
+        padding: 0;
+    }
+    .block-design{
+        padding: 30px 2%;
+        width: 100%;
+    }
+    .actions-design{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .block-design button{
+        position: static;
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 880px) {
+    .design{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .block-button-back{
+        z-index: 999;
+        top: 0;
+        left: 1%;
+    }
+    .block-design h1{
+        font-size: 34px;
+        text-align: center;
+    }
+    .block-design p{
+        text-align: center;
+    }
+    .actions-design{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .design-button{
+        width: 100%;
+    }
+}
+

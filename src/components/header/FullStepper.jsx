@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import './HeaderStyle.css';
 import stepsData from '../../data/stepsData';
+import { useNavigate } from 'react-router-dom';
 
 
 function FullStepper({currentStep , completedSteps, setCompletedSteps}) {
+    const navigate = useNavigate();
+
     const toggleStep = (id) => {
         setCompletedSteps((prev) =>
             prev.includes(id)
@@ -32,7 +35,7 @@ function FullStepper({currentStep , completedSteps, setCompletedSteps}) {
                 }
 
                 return (
-                    <label key={step.id} className="step-block">
+                    <label key={step.id} className="step-block" onClick={() => navigate(`/${step.label}`)}>
                         <input
                             type="checkbox"
                             checked={isCompleted}
