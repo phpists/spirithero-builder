@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+
+.block-home-page{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-image-home {
+    width: 45%;
+    height: 1024px;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-scaled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 664px;
+    height: 100%;
+    background-image: url('src/assets/home-img.png');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.home-block{
+    width: 55%;
+}
+
+.block-home-title{
+    position: relative;
+    padding: 24px 56px;
+    display: flex;
+    flex-direction: column;
+    color: #373239;
+}
+
+.block-welcome{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #605767;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.home-block h1{
+    text-align: left;
+    font-family: 'Poppins-Regular' , sans-serif;
+    font-size: 36px;
+    padding: 100px 0 20px 0;
+}
+
+.home-block p{
+    text-align: left;
+    font-family: 'Poppins-Regular' , sans-serif;
+    font-size: 18px;
+    color: #605767;
+}
+
+.home-block button{
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    width: 236px;
+    padding: 16px;
+    margin: 20px 0 0 0;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #CACACA;
+    color: #373239;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home-block span{
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.home-block button:hover{
+    border: 1px solid #4E008E;
+    color: #4E008E;
+}
+
+.home-block button:hover span{
+    display: block;
+}
+
+.horizontal-line{
+    width: 55.7vw;
+    height: 2px;
+    margin-left: -20px;
+    background-color: #CACACA;
+}
+
+.block-book-demo{
+    background-color: #CACACA;
+    max-width: 740px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    margin: 5% auto;
+    border-radius: 16px;
+    text-align: left;
+    text-indent: 15px;
+}
+
+.block-icon-demo{
+    display: flex;
+}
+
+.block-book-demo h3{
+    color: #000;
+    font-weight: normal;
+}
+
+.block-book-demo p{
+    white-space: nowrap;
+    padding: 0 0 0 2px;
+     color: #47424A;
+     font-size: 12px;
+ }
+
+.block-book-demo button{
+    width: 112px;
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 12px;
+}
+
+@media (max-width: 1440px) {
+    .block-book-demo{
+        width: 100%;
+        max-width: 400px;
+        white-space: normal;
+        margin: 2% auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+    .block-home-title{
+        padding: 12px 28px;
+    }
+    .block-welcome{
+        position: static;
+    }
+    .home-block h1{
+        white-space: nowrap;
+        padding: 50px 0;
+        font-size: 28px;
+    }
+    .block-book-demo p{
+        font-size: 10px;
+    }
+    .block-icon-demo{
+        flex-direction: column;
+        align-items: center;
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .block-book-demo h3, p{
+        margin: 5px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .block-home-page{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .block-image-home{
+        width: 100%;
+    }
+
+    .home-block{
+        position: absolute;
+        top: 50px;
+        margin: 0 3%;
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 16px;
+    }
+
+    .block-home-title{
+        padding: 12px 20px;
+    }
+
+    .home-block h1{
+        text-align: center;
+        padding: 25px 0;
+
+    }
+
+    .home-block p{
+        text-align: center;
+
+    }
+
+    .home-block-buttons{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .home-block-buttons button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-size: 12px;
+    }
+    .block-book-demo{
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .horizontal-line{
+        width: 90.5vw;
+        margin: 0;
+    }
+}
