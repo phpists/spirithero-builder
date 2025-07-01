@@ -1,0 +1,69 @@
+.header-fundraising{
+    padding: 8px 16px;
+    margin: 0 57px;
+    background-color: #F1EEF4;
+    color: #605767;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #CACACA;
+}
+
+.header-fundraising div{
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.header-custom-checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 20px 0 5px;
+}
+
+.header-custom-checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin: 0;
+}
+
+.check-mark {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 4px; /* square with soft edges; use 0 if you want sharp corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.header-custom-checkbox input:checked + .check-mark {
+    border-color: #4E008E;
+}
+
+.header-custom-checkbox input:checked + .check-mark::after {
+    content: "";
+    width: 15px;
+    height: 5px;
+    border: solid #4E008E;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    display: block;
+}
+
+.title-collection{
+    padding: 0 !important;
+    text-align: left;
+    width: 306px;
+}

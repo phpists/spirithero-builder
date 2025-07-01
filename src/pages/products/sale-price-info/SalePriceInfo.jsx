@@ -10,6 +10,8 @@ function SalePriceInfo() {
         setIsChecked(e.target.checked);
     };
 
+    const handleModalAmountColorsVisible = () => setModalAmountColorsVisible(!modalAmountColorsVisible);
+
     return (
         <div className="block-sale-price" style={{width: isChecked && '265px'}}>
             {isChecked && <div className="warnings-sale-price">
@@ -80,7 +82,7 @@ function SalePriceInfo() {
                     </button>
                 )
             }
-            {modalAmountColorsVisible && <ModalAmountColors />}
+            {modalAmountColorsVisible && <ModalAmountColors handleModalAmountColorsVisible={handleModalAmountColorsVisible} />}
         </div>
     );
 }

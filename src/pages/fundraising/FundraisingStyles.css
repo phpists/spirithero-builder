@@ -1,0 +1,16 @@
+.block-fundraising{
+    display: flex;
+    justify-content: center;
+    color: #000;
+}
+
+.block-fundraising-table{
+    width: 100%;
+    max-width: 1072px;
+}
+
+.block-side-bare{
+    width: 30%;
+    max-width: 450px;
+    background-color: #F1EEF4;
+}

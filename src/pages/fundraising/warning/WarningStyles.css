@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+.block-warning{
+    display: flex;
+    width: 782px;
+    color: #373239;
+    font-size: 14px;
+    font-family: 'Poppins-Regular' , sans-serif;
+    padding: 10px;
+    background-color: #FAF2E5;
+    border: 1px solid #FBB041;
+    border-radius: 6px;
+    margin: 24px 56px;
+    text-indent: 15px;
+}

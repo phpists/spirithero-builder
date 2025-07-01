@@ -1,0 +1,132 @@
+.card-fundraising{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1EEF4;
+    padding: 10px 15px 10px 71px;
+    margin: 0 57px;
+    border-bottom: 2px solid #CACACA;
+}
+
+/*checkbox*/
+.card-custom-checkbox{
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+}
+
+.card-custom-checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin: 0;
+}
+
+.card-check-mark {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.card-custom-checkbox input:checked + .card-check-mark {
+    border-color: #4E008E;
+}
+
+.card-custom-checkbox input:checked + .card-check-mark::after {
+    content: "";
+    width: 15px;
+    height: 5px;
+    border: solid #4E008E;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    display: block;
+}
+/**/
+
+.card-fundraising img{
+    width: 80px;
+    height: 80px;
+    margin-left: -25px;
+}
+
+.card-title-colors{
+    width: 200px;
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 0 0 20px;
+    margin-left: -25px;
+}
+
+.card-title-colors h2{
+    text-align: left;
+    margin-left: -3px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #373239;
+}
+
+.card-dots-fundraising {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 35px;
+    align-items: center;
+}
+
+.dot-сard{
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow:
+            0 0 0 2px #fff,  /* біла обводка */
+            0 0 0 4px #CACACA;  /* чорна обводка */
+}
+
+.dot-сard:hover{
+    transform: scale(1.2);
+    box-shadow:
+            0 0 0 2px #fff,  /* біла обводка */
+            0 0 0 4px #000;  /* чорна обводка */
+}
+
+.block-cost{
+    width: 124px;
+    font-size: 14px;
+    color: #373239;
+}
+
+.input-profit{
+    text-align: center;
+    width: 122px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #000;
+    border: .5px solid #CACACA;
+}
+
+.block-price{
+    color: #AA0003;
+    font-weight: 700;
+}
+
+.block-sell-cost{
+    padding: 0 5px;
+    color: #4E008E;
+    border-bottom: 2px solid #4E008E;
+}
