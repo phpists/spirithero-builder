@@ -2,9 +2,14 @@ import {useState} from 'react';
 import './DesignStyles.css';
 import Slider from './Slider';
 import ProductPreview from './product-preview/ProductPreview';
+import ActionDesign from './actions-design/ActionDesign';
+import IcoComplete from './IconComplete';
 
 function Design() {
     const [side , setSide] = useState(true);
+    const [activeButton, setActiveButton] = useState('image');
+
+    const closeModalTemplates = () => setActiveButton(false);
 
     return (
         <div className="design">
@@ -50,7 +55,10 @@ function Design() {
                 <h1>Create your DESIGN</h1>
                 <p>Choose options from ready solutions to the custom ones</p>
                 <div className="actions-design">
-                    <div className="design-button">
+                    <div
+                         className={`design-button ${activeButton === 'image' ? 'active' : ''}`}
+                         onClick={() => setActiveButton('image')}
+                    >
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M40 18.596C40 37.4186 29.3675 37.4186 18.9189 37.4186C8.47029 37.4186 0 28.9914 0 18.596C0 8.20053 8.47029 3 18.9189 3C29.3675 3 40 8.20053 40 18.596Z" fill="#F1EEF4"/>
                             <g clipPath="url(#clip0_4599_88915)">
@@ -65,8 +73,12 @@ function Design() {
                             </defs>
                         </svg>
                         Add Image
+                        {activeButton === 'image' && <div className="complete-icon-design"><IcoComplete /></div>}
                     </div>
-                    <div className="design-button">
+                    <div
+                        className={`design-button ${activeButton === 'text' ? 'active' : ''}`}
+                        onClick={() => setActiveButton('text')}
+                    >
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M40 18.596C40 37.4186 29.3675 37.4186 18.9189 37.4186C8.47029 37.4186 0 28.9914 0 18.596C0 8.20053 8.47029 3 18.9189 3C29.3675 3 40 8.20053 40 18.596Z" fill="#F1EEF4"/>
                             <g clipPath="url(#clip0_4599_110161)">
@@ -82,8 +94,12 @@ function Design() {
                             </defs>
                         </svg>
                         Add Text
+                        {activeButton === 'text' && <div className="complete-icon-design"><IcoComplete /></div>}
                     </div>
-                    <div className="design-button">
+                    <div
+                        className={`design-button ${activeButton === 'template' ? 'active' : ''}`}
+                        onClick={() => setActiveButton('template')}
+                    >
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M40 18.596C40 37.4186 29.3675 37.4186 18.9189 37.4186C8.47029 37.4186 0 28.9914 0 18.596C0 8.20053 8.47029 3 18.9189 3C29.3675 3 40 8.20053 40 18.596Z" fill="#F1EEF4"/>
                             <path d="M20 23H17V20L26 11L29 14L20 23Z" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -91,8 +107,11 @@ function Design() {
                             <path d="M28.25 20V27.5C28.25 27.6989 28.171 27.8897 28.0303 28.0303C27.8897 28.171 27.6989 28.25 27.5 28.25H12.5C12.3011 28.25 12.1103 28.171 11.9697 28.0303C11.829 27.8897 11.75 27.6989 11.75 27.5V12.5C11.75 12.3011 11.829 12.1103 11.9697 11.9697C12.1103 11.829 12.3011 11.75 12.5 11.75H20" stroke="#4E008E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         Templates
+                        {activeButton === 'template' && <div className="complete-icon-design"><IcoComplete /></div>}
                     </div>
                 </div>
+
+                <ActionDesign activeButton={activeButton} closeModalTemplates={closeModalTemplates} />
 
                 <ProductPreview />
             </div>

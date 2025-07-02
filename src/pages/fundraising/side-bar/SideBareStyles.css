@@ -162,3 +162,14 @@
     display: block;
 }
 
+@media (max-width: 1280px) {
+    .side-bare{
+        z-index: 9999;
+        background-color: #F1EEF4;
+        display: none;
+    }
+
+    .side-bare.show {
+        display: block;
+    }
+}

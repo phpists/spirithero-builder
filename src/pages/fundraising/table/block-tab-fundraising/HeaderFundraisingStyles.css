@@ -67,3 +67,35 @@
     text-align: left;
     width: 306px;
 }
+
+@media (max-width: 1000px) {
+    .header-fundraising{
+        padding: 1%;
+        margin: 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 850px) {
+    .header-fundraising{
+        white-space: nowrap;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header-fundraising{
+        white-space: normal;
+    }
+    .header-fundraising div{
+        cursor: pointer;
+        padding: 4px;
+    }
+    .header-chevron{
+        padding: 0;
+    }
+    .header-custom-checkbox{
+        margin: 0 1% 0 0;
+    }
+}
+

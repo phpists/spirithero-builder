@@ -1,13 +1,13 @@
 import './ModalProducts.css';;
-import ButtonClose from './ButtonClose';
-import IconClose from './icons/IconClose';
-import IconComplete from './icons/IconComplete';
+import ButtonClose from '../icons/ButtonClose';
+import IconClose from '../icons/IconClose';
+import IconComplete from '../icons/IconComplete';
 
-function ModalProducts({handleModalProductsView}) {
+function ModalProducts({handleModalView}) {
     return (
         <div className="block-modal">
             <h1>Maybe you would like to start flash sale?</h1>
-            <ButtonClose handleModalProductsView={handleModalProductsView}/>
+            <ButtonClose handleModalView={handleModalView}/>
             <p>
                 Flash Sales are a great way to promote certain items in your store. Just keep in mind <br/>
                 there is a minimum requirement for each flash sale.

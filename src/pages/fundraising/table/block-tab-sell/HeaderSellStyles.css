@@ -1,0 +1,121 @@
+.sell-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f1eef4;
+    padding: 16px 15px 16px 48px;
+    margin: 0 57px;
+    border-bottom: 2px solid #cacaca;
+    font-weight: bold;
+    color: #605767;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sell-checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.sell-checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.sell-checkmark {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.sell-checkbox input:checked + .sell-checkmark {
+    border-color: #4e008e;
+}
+
+.sell-checkbox input:checked + .sell-checkmark::after {
+    content: '';
+    width: 15px;
+    height: 5px;
+    border: solid #4e008e;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    display: block;
+}
+
+.sell-chevron {
+    cursor: pointer;
+}
+
+.sell-title {
+    width: 294px;
+    white-space: nowrap;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.block-base-total-costs{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    gap: 80px;
+}
+
+.sell-base-cost{
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: center;
+    margin-left: -100px;
+}
+.sell-total-cost {
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .sell-header {
+        padding: 1%;
+        margin: 0;
+    }
+
+    .sell-base-cost,
+    .sell-total-cost {
+        width: 50px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 850px) {
+    .sell-title{
+        font-size: 10px;
+    }
+
+    .sell-base-cost{
+        font-size: 10px;
+    }
+
+    .sell-total-cost{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .block-base-total-costs{
+        gap: 20px;
+    }
+    .sell-base-cost{
+        margin-left: -40px;
+    }
+}

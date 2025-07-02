@@ -1,9 +1,9 @@
-import './HeaderStyles.css';
+import './HeaderFundraisingStyles.css';
 
-function HeaderFundraising({title,  onToggleList, isListVisible }) {
+function HeaderFundraising({title, activeTab, onToggleList, isListVisible }) {
     return (
         <div className="header-fundraising">
-            <div onClick={onToggleList}>
+            <div className="header-chevron" onClick={onToggleList}>
                 <svg
                     style={{
                         transform: !isListVisible ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -22,7 +22,12 @@ function HeaderFundraising({title,  onToggleList, isListVisible }) {
             <div>
                 base cost
             </div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            {activeTab === 'sell' && <div>
+                Total cost
+            </div>}
+
+            {activeTab === 'fundraise' && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_4000_108343)">
                     <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#FBB041" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M11.25 11.25C11.4489 11.25 11.6397 11.329 11.7803 11.4697C11.921 11.6103 12 11.8011 12 12V15.75C12 15.9489 12.079 16.1397 12.2197 16.2803C12.3603 16.421 12.5511 16.5 12.75 16.5" stroke="#FBB041" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -33,14 +38,14 @@ function HeaderFundraising({title,  onToggleList, isListVisible }) {
                         <rect width="24" height="24" fill="white"/>
                     </clipPath>
                 </defs>
-            </svg>
+            </svg>}
 
-            <div>
+            {activeTab === 'fundraise' && <div>
                 your profit
-            </div>
-            <div>
+            </div>}
+            {activeTab === 'fundraise' && <div>
                 selling price
-            </div>
+            </div>}
         </div>
     )
 }

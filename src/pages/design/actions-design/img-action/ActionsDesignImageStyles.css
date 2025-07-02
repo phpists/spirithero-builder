@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+.block-action-img-design{
+    margin: 0 20px;
+}
+
+.block-action-img-design p{
+    margin-left: -25px;
+    color: #373239;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Poppins-Bold' , sans-serif;
+}
+
+.block-action-img-design ul li{
+    text-align: left;
+    color: #605767;
+    margin: 10px 0;
+}
+
+.block-file{
+    width: 117%;
+    max-width: 630px;
+    border: 2px dashed #605767;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    color: #999;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+    margin-left: -20px;
+}
+
+.block-file p{
+    margin-top: 10px;
+}
+
+.block-agree-upload{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #605767;
+    margin: 5px 0 20px 0;
+}
+
+/*checkbox*/
+.img-custom-checkbox{
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 10px 0 -20px;
+}
+
+.img-custom-checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin: 0;
+}
+
+.img-check-mark {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.img-custom-checkbox input:checked + .img-check-mark {
+    border-color: #4E008E;
+}
+
+.img-custom-checkbox input:checked + .img-check-mark::after {
+    content: "";
+    width: 15px;
+    height: 5px;
+    border: solid #4E008E;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .block-file{
+        width: 110%;
+    }
+}
+
+@media (max-width: 880px) {
+    .block-file{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .block-agree-upload{
+        width: 100%;
+        margin: 5px 1%;
+    }
+}

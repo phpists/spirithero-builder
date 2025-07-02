@@ -59,3 +59,42 @@
     color: #fff;
     text-indent: 10px;
 }
+
+@media (max-width: 750px) {
+    .block-search{
+        padding: 24px auto;
+    }
+
+    .block-search label{
+        display: flex;
+        align-items: center;
+    }
+    .block-search span{
+        top: 30px;
+    }
+
+    .block-search input{
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .search-buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    .block-search span{
+        top: 5px;
+    }
+    .block-search{
+        flex-direction: column;
+    }
+    .search-button-delete{
+        width: 100%;
+    }
+    .search-button-move{
+        justify-content: center;
+    }
+}

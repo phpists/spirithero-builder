@@ -127,7 +127,7 @@ function ProductPreview() {
     };
 
     const renderGroup = (title, subtitle, products, isVisible, toggle, onDelete) => (
-        <div>
+        <div className="block-scroll">
             <GroupHeader title={title} subtitle={subtitle} isOpen={isVisible} toggle={toggle} />
             {isVisible && products.map((p, i) => (
                 <ProductCard
@@ -147,8 +147,8 @@ function ProductPreview() {
                 products,
                 visibleGroup1,
                 () => setVisibleGroup1(!visibleGroup1),
-                deleteProductFromGroup1
-            )}
+            deleteProductFromGroup1
+        )}
             {renderGroup(
                 'Headwear Collection Group',
                 'product preview:',

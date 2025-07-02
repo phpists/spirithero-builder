@@ -173,6 +173,7 @@
 }
 
 .design-button{
+    position: relative;
     white-space: nowrap;
     cursor: pointer;
     color: #373239;
@@ -186,6 +187,18 @@
     align-items: center;
     background-color: #fff;
     padding: 16px;
+}
+
+.design-button.active {
+    border-color: #4E008E;
+    background-color: #f0eaff;
+    font-weight: bold;
+}
+
+.complete-icon-design{
+    position: absolute;
+    top: -10px;
+    left: -15px;
 }
 
 @media (max-width: 1200px) {

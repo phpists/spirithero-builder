@@ -16,3 +16,10 @@
     margin: 24px 56px;
     text-indent: 15px;
 }
+
+@media (max-width: 900px) {
+    .block-warning{
+        width: 80%;
+        margin: 10px 10%;
+    }
+}

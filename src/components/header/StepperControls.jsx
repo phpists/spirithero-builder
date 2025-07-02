@@ -1,8 +1,7 @@
 import './HeaderStyle.css';
 import { useNavigate } from 'react-router-dom';
 
-function StepperControls({ currentStep, setCurrentStep, totalSteps, onSaveExit , handleModalProductsView}) {
-    const navigate = useNavigate();
+function StepperControls({ currentStep, setCurrentStep, totalSteps, onSaveExit , handleModalView}) {
 
     const handleNext = () => {
         if (currentStep < totalSteps) {
@@ -28,7 +27,7 @@ function StepperControls({ currentStep, setCurrentStep, totalSteps, onSaveExit ,
                     Back
                 </button>
                 <button onClick={() =>{
-                    handleModalProductsView();
+                    handleModalView();
                     handleNext();
                 }} disabled={currentStep === totalSteps}>
                     Next

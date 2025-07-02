@@ -1,6 +1,6 @@
-function ButtonClose({handleModalProductsView}){
+function ButtonClose({handleModalView}){
     return(
-        <div className="button-close" onClick={handleModalProductsView}>
+        <div className="button-close" onClick={handleModalView}>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_i_2112_50263)">
                     <rect width="32" height="32" rx="16" fill="#FCFCFC"/>

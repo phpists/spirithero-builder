@@ -2,23 +2,36 @@ import {useState} from 'react';
 import FullStepper from './FullStepper';
 import StepperControls from './StepperControls';
 import './HeaderStyle.css';
-import './modals/ModalProducts.css';
+import './modals/modal-products/ModalProducts.css';
 import stepsData from '../../data/stepsData';
-import ModalProducts from './modals/ModalProducts';
-import { useNavigate } from 'react-router-dom';
+import ModalProducts from './modals/modal-products/ModalProducts';
+import ModalDesign from './modals/modal-design/ModalDesign';
+import { useNavigate , useLocation} from 'react-router-dom';
 
 function Header() {
     const totalSteps = stepsData.length;
     const [currentStep, setCurrentStep] = useState(1);
     const [completedSteps, setCompletedSteps] = useState([]);
+
     const [modalProductsVisible , setModalProductsVisible] = useState(false);
+    const [modalDesignVisible , setModalDesignVisible] = useState(false);
+
     const navigate = useNavigate();
+    const location = useLocation();
 
     const onSaveExit = () => {
         console.log('📝 Saving progress and exiting...');
     };
 
-    const handleModalProductsView = () => setModalProductsVisible(!modalProductsVisible);
+    const handleModalView = () => {
+        if(location.pathname === '/Products'){
+            setModalProductsVisible(!modalProductsVisible);
+        }else if(location.pathname === '/Design'){
+            setModalDesignVisible(!modalDesignVisible)
+        }else{
+            console.log(location.pathname)
+        }
+    };
 
     return (
         <div className="header-block">
@@ -35,7 +48,7 @@ function Header() {
                 setCompletedSteps={setCompletedSteps}
             />
             <StepperControls
-                handleModalProductsView={handleModalProductsView}
+                handleModalView={handleModalView}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 totalSteps={totalSteps}
@@ -44,7 +57,12 @@ function Header() {
 
             {modalProductsVisible &&
                 <div className="modal-products">
-                    <ModalProducts handleModalProductsView={handleModalProductsView} />
+                    <ModalProducts handleModalView={handleModalView} />
+                </div>
+            }
+            {modalDesignVisible &&
+                <div>
+                    <ModalDesign handleModalView={handleModalView} />
                 </div>
             }
         </div>

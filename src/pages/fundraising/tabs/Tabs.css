@@ -75,7 +75,7 @@
     box-shadow: 0 0 0 5px #F1EEF4;
     padding: 12px 20px;
     border-radius: 22px 22px 0 0;
-    color: #4E008E;
+    color: #605767;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -167,13 +167,14 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 101%;
     background: #fff;
     border: 1px solid #9B9AA5;
     border-top: none;
     border-radius: 0 0 12px 12px;
     z-index: 10;
     overflow: hidden;
+    margin-left: -1px;
 }
 
 .custom-option {
@@ -195,4 +196,18 @@
     border-radius: 0 0 12px 12px;
 }
 
+@media (max-width: 690px) {
+    .block-tabs-select{
+        height: 140px;
+    }
+    .block-fundraising-select{
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .block-fundraising-tabs{
+        left: 5%;
+    }
+}
 
