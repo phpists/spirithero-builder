@@ -6,6 +6,7 @@ import Products from './pages/products/Products';
 import Design from './pages/design/Design';
 import HomePage from './pages/home/HomePage';
 import Fundraising from './pages/fundraising/Fundraising';
+import SaleSettings from './pages/sale-settings/SaleSettings';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/Products" element={<Products />} />
                     <Route path="/Design" element={<Design />} />
                     <Route path="/Fundraising" element={<Fundraising />} />
+                    <Route path="/Flash sale Settings" element={<SaleSettings />} />
                 </Routes>
             </div>
         </BrowserRouter>
