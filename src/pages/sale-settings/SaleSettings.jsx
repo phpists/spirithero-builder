@@ -98,7 +98,7 @@ function SaleSettings() {
                                     <path d="M18.5 28.25V23.75H21.5V28.25" stroke="#FBB041" strokeWidth="1.5"
                                           strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
-                                <div>
+                                <div style={{marginLeft: '10px'}}>
                                     <p className="button-title">1 Location</p>
                                     <p>labeled/sorted/bagged Free Shipping</p>
                                 </div>
@@ -131,7 +131,7 @@ function SaleSettings() {
                                         stroke="#FBB041" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
 
-                                <div>
+                                <div style={{marginLeft: '10px'}}>
                                     <p className="button-title">Ship - to - Home</p>
                                     <p>$8.95 shipping</p>
                                 </div>
@@ -152,7 +152,7 @@ function SaleSettings() {
                                         fill="#FBB041" stroke="#FBB041" strokeWidth="1.5"/>
                                 </svg>
 
-                                <div>
+                                <div style={{marginLeft: '10px'}}>
                                     <p className="button-title">Buyer’s choice</p>
                                     <p>Give both options</p>
                                 </div>
