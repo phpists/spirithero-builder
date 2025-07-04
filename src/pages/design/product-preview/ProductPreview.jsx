@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ProductPreview.css';
+import ModalColors from './modal-colors/ModalColors';
 
 const initialProducts = [
     {
@@ -35,60 +36,69 @@ const initialProduct = [
     }
 ];
 
-const ProductCard = ({ product, onDelete }) => (
-    <div className="product-card-preview">
-        {product.completeIcon && <div className="icon-complete-design">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_4599_10013)">
-                    <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" fill="#FBB041"/>
-                    <path d="M11 17L14 20L21 13" stroke="#4E008E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </g>
-                <defs>
-                    <clipPath id="clip0_4599_10013">
-                        <rect width="32" height="32" fill="white"/>
-                    </clipPath>
-                </defs>
-            </svg>
-        </div>}
-        <img src={product.image} alt={product.name} />
-        <div className="block-title-colors">
-            <h2>{product.name}</h2>
-            <div className="color-dots-design">
-                {product.colors.map((color, i) => (
-                    <span
-                        key={i}
-                        className="dot-design"
-                        style={{ backgroundColor: color }}
-                    />
-                ))}
+const ProductCard = ({ product, onDelete }) => {
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const handleModalVisible = () => setModalVisible(!modalVisible);
+
+    return (
+        <div className="product-card-preview">
+            {product.completeIcon && (
+                <div className="icon-complete-design">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clipPath="url(#clip0_4599_10013)">
+                            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" fill="#FBB041" />
+                            <path d="M11 17L14 20L21 13" stroke="#4E008E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_4599_10013">
+                                <rect width="32" height="32" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            )}
+            <img src={product.image} alt={product.name} />
+            <div className="block-title-colors">
+                <h2>{product.name}</h2>
+                <div className="color-dots-design">
+                    {product.colors.map((color, i) => (
+                        <span
+                            key={i}
+                            className="dot-design"
+                            style={{ backgroundColor: color }}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
-        <div
-            className="design-close-button"
-            onClick={onDelete}
-            style={{ cursor: 'pointer' }}
-            title="Delete product"
-        >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="#14142B" strokeWidth="2" strokeLinecap="round" />
-                <path d="M6 6L18 18" stroke="#14142B" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-        </div>
-        <div className="block-button-add-colors">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="#4E008E" strokeWidth="1.5" />
-                <path d="M5.5 8H10.5" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M8 5.5V10.5" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <div className="block-add-colors">
-                <span style={{ backgroundColor: '#CCDE2F' }}></span>
-                <span style={{ backgroundColor: '#637FF1' }}></span>
-                <span style={{ backgroundColor: '#F71C1C' }}></span>
-                <span style={{ backgroundColor: '#B1B1B1' }}></span>
+            <div
+                className="design-close-button"
+                onClick={onDelete}
+                style={{ cursor: 'pointer' }}
+                title="Delete product"
+            >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#14142B" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M6 6L18 18" stroke="#14142B" strokeWidth="2" strokeLinecap="round" />
+                </svg>
             </div>
+            <div className="block-button-add-colors">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="#4E008E" strokeWidth="1.5" />
+                    <path d="M5.5 8H10.5" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M8 5.5V10.5" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <div className="block-add-colors" onClick={handleModalVisible}>
+                    <span style={{ backgroundColor: '#CCDE2F' }}></span>
+                    <span style={{ backgroundColor: '#637FF1' }}></span>
+                    <span style={{ backgroundColor: '#F71C1C' }}></span>
+                    <span style={{ backgroundColor: '#B1B1B1' }}></span>
+                </div>
+            </div>
+            {modalVisible && <ModalColors handleModalVisible={handleModalVisible} />}
         </div>
-    </div>
-);
+    );
+};
 
 const GroupHeader = ({ title, subtitle, isOpen, toggle }) => (
     <div className="product-info" onClick={toggle} style={{ cursor: 'pointer' }}>
@@ -117,7 +127,6 @@ function ProductPreview() {
     const [visibleGroup1, setVisibleGroup1] = useState(true);
     const [visibleGroup2, setVisibleGroup2] = useState(true);
 
-    // Функції для видалення продуктів
     const deleteProductFromGroup1 = (index) => {
         setProducts(products.filter((_, i) => i !== index));
     };
@@ -147,8 +156,8 @@ function ProductPreview() {
                 products,
                 visibleGroup1,
                 () => setVisibleGroup1(!visibleGroup1),
-            deleteProductFromGroup1
-        )}
+                deleteProductFromGroup1
+            )}
             {renderGroup(
                 'Headwear Collection Group',
                 'product preview:',

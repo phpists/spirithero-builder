@@ -1,5 +1,5 @@
 import './ModalTemplatesDesignStyles.css';
-import ButtonClose from './ButtonClose';
+import ButtonClose from '../../ButtonClose';
 
 function ModalTemplatesDesign({closeModalTemplates}) {
     const templates = [
