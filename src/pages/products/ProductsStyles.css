@@ -368,12 +368,15 @@
 }
 
 @media (max-width: 800px) {
+    .block-cards-products{
+        padding: 0;
+    }
     .block-products{
-        height: 300px;
+        padding: 0;
+        height: 350px;
     }
     .block-products h1{
         font-size: 18px;
-        float: none;
         margin: 0;
         padding: 50px;
     }

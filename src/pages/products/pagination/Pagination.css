@@ -1,3 +1,17 @@
 .pagination{
     margin-top: 50px;
 }
+
+.pagination-button-previous{
+    padding-left: 30px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: #eee;
+    color: #888;
+}
+
+@media (max-width: 500px) {
+    .pagination-button-previous{
+        padding-left: 7px;
+    }
+}

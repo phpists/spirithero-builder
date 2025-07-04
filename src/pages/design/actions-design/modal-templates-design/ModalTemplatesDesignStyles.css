@@ -18,7 +18,8 @@
 
 .side-bare-templates {
     background-color: #F1EEF4;
-    width: 296px;
+    width: 100%;
+    max-width: 296px;
     text-align: left;
     padding: 56px 16px;
 }
@@ -86,4 +87,17 @@
     border-radius: 12px;
     display: block;
     margin-top: 50px;
+}
+
+@media (max-width: 1400px) {
+    .modal-templates-design{
+        width: 100vw;
+        left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .side-bare-templates{
+        width: fit-content;
+    }
 }

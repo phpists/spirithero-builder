@@ -109,4 +109,25 @@
     pointer-events: none;
 }
 
+@media (max-width: 700px) {
+    .modal-amount-colors{
+        width: 100%;
+        left: 0;
+    }
+    .modal-amount-colors h1{
+        padding: 30px 0;
+        white-space: normal;
+        font-size: 14px !important;
+    }
+    .input-wrapper input{
+        width: 100%;
+    }
+}
 
+@media (max-width: 500px) {
+    .modal-amount-colors{
+        height: 100vh;
+        overflow-y: auto;
+        top: 0;
+    }
+}

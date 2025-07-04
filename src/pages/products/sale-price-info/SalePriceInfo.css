@@ -4,7 +4,8 @@
 }
 
 .block-sale-price{
-     width: 425px;
+     width: 100%;
+     max-width: 425px;
      position: absolute;
      top: 40px;
      right: 0;
@@ -29,6 +30,7 @@
 }
 
 .warnings-sale-price p{
+    width: 100%;
     margin: 0 10px;
 }
 
@@ -135,7 +137,13 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 500px) {
+    .ul-info{
+        white-space: normal;
+        display: flex;
+        flex-direction: column;
+    }
     .block-sale-price{
+        width: 100vw;
         top: 100px;
         left: 10px;
     }

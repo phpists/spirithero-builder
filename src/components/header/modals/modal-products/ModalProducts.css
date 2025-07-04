@@ -194,3 +194,15 @@
         margin: 10px 0;
     }
 }
+
+@media (max-width: 660px) {
+    .block-ul-modal{
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-products{
+        overflow-y: auto;
+        height: 100vh;
+        top: 0;
+    }
+}

@@ -26,13 +26,9 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
             <button
                 disabled={currentPage === 1}
                 onClick={() => onPageChange(currentPage - 1)}
+                className="pagination-button-previous"
                 style={{
                     ...buttonStyle,
-                    paddingLeft: '30px',
-                    borderTopLeftRadius: '6px',
-                    borderBottomLeftRadius: '6px',
-                    backgroundColor: "#eee",
-                    color: "#888",
                     cursor: currentPage === 1 ? "default" : "pointer",
                 }}
                 aria-label="Previous"
