@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+.card-header-step-fourth {
+    background-color: #F1EEF4;
+    border-radius: 12px;
+    border: 1px solid #CACACA;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 24px;
+}
+
+.header-step4-number {
+    width: 40px;
+    height: 40px;
+    background-color: #E8DDF1;
+    padding: 8px;
+    color: #4E008E;
+    border: 2px solid #9569BA;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header-step-fourth p {
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.content-card-step4{
+    position: relative;
+    color: #000;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.ul-switch-not-switched{
+    text-align: left;
+    color: #47424A;
+    font-size: 14px;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+.ul-switch-not-switched li{
+    font-family: 'Poppins-Regular', sans-serif;
+    margin: 0 25px 10px 25px;
+}
+
+.ul-switch-switched {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.ul-switch-switched li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    margin: 6px 0;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 14px;
+    color: #47424A;
+    list-style: none;
+}
+
+/*switch*/
+.switch-settings {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+.switch-settings input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.settings-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* колір у вимкненому стані */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.settings-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    top: 2.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Ввімкнений стан — капсула стає фіолетовою */
+input:checked + .settings-slider {
+    background-color: #4E008E;
+}
+
+/* Коло зсувається вправо */
+input:checked + .settings-slider:before {
+    transform: translateX(20px);
+}
+
+.switch-list-switched{
+    position: absolute;
+    top: 0;
+    left: 25vw;
+}
+
+@media (max-width: 450px) {
+    .switch-list-switched{
+        position: static;
+
+    }
+}

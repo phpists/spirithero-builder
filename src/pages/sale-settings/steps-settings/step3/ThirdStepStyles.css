@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+.header-block-card {
+    background-color: #F1EEF4;
+    border-radius: 12px;
+    border: 1px solid #CACACA;
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    cursor: pointer;
+}
+
+.card-header p {
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.rdp-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.rdp-caption_label {
+    position: absolute;
+    top: -20px;
+    left: 120px;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    z-index: 0 !important;
+}
+
+.rdp-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+    pointer-events: auto;
+}
+
+.rdp-nav_button {
+    pointer-events: all;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.rdp-button_previous svg polygon{
+    stroke: #605767 !important;
+    fill: black !important;
+    width: 24px;
+    height: 24px;
+}
+
+.rdp-button_next svg polygon{
+    stroke: #605767 !important;
+    fill: black !important;
+    width: 24px;
+    height: 24px;
+}
+
+.rdp-months{
+    background-color: #fff !important;
+    color: black !important;
+    padding: 20px;
+}
+
+.rdp-button_previous polygon{
+    stroke: #000; /* червоний колір */
+}
+
+.rdp-button_next polygon {
+    stroke: #000; /* червоний колір */
+}
+
+.rdp-day,
+.rdp-day_selected,
+.rdp-day_range_start,
+.rdp-day_range_end,
+.rdp-day_today,
+.rdp-head_cell,
+.rdp-caption_label,
+.rdp-nav_button {
+    color: black !important;
+}
+
+.my-selected,
+.my-range-start,
+.my-range-end {
+    background-color: #4E008E !important;
+    color: #fff !important;
+}
+
+.rdp-day_today {
+    font-weight: bold;
+}
+
+.rdp-head_cell {
+    font-weight: 500;
+    color: #000;
+}
+
+.rdp-weekday{
+    font-weight: 700 !important;
+    color: #000;
+    text-transform: uppercase !important;
+}
+
+.rdp-day:hover {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+}
+
+.rdp-nav_button svg {
+    stroke: black !important;
+    fill: black !important;
+}
+
+.settings-block-date-info{
+    display: flex;
+    padding: 20px;
+}
+
+.settings-block-date-info p{
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+    padding: 10px;
+    color: #47424A;
+    font-size: 14px;
+    font-family: Poppins-Regular , sans-serif;
+}
+
+@media (max-width: 800px) {
+    .settings-block-date-info{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .settings-block-date-info p{
+        text-align: center;
+    }
+}
+
