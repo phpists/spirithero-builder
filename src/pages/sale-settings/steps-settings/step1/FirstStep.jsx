@@ -26,7 +26,7 @@ function FirstStep() {
                         }}>
                             {isOpen ? <IconMark /> : 1}
                         </span>
-                        <p style={{fontWeight: '700'}}>How do you want your orders shipped?</p>
+                        <p style={{fontWeight: '700' , margin: '0 0 0 7px'}}>How do you want your orders shipped?</p>
                     </div>
                     <div style={{transform: isOpen && 'rotate(-180deg)'}}>
                         <svg style={{cursor: 'pointer'}} width="40" height="40" viewBox="0 0 40 40" fill="none"

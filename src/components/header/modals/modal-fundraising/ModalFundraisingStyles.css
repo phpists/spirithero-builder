@@ -1,0 +1,237 @@
+.modal-fundraising{
+    z-index: 9999999999;
+    position: fixed;
+    left: calc(50vw - 325px);
+    width: 100%;
+    max-width: 650px;
+    background-color: #F1EEF4;
+    border: 1px solid grey;
+    color: #000;
+    border-radius: 24px;
+    padding: 64px;
+}
+
+.block-close-modal-fundraising{
+    position: absolute;
+    right: 10px;
+    top: -10px;
+}
+
+.modal-fundraising h1{
+    padding: 10px 0;
+    font-size: 26px;
+}
+
+.block-option1 label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.scroll-modal-fundraising{
+    overflow-y: scroll;
+}
+
+.block-option2 label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.modal-fundraising input{
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 12px;
+    border: 1px solid #9B9AA5;
+    margin: 7px 0 10px 0;
+}
+
+/*inputs radio*/
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #000;
+}
+
+.radio-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-indent: 5px;
+    margin-top: 10px;
+}
+
+.radio-input {
+    display: none;
+}
+
+.custom-radio {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border: 2px solid #9B9AA5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #4E008E;
+    border-radius: 50%;
+}
+
+.block-icon-i{
+    margin-top: 3px;
+}
+/*/////inputs radio*/
+
+.inputs-bank-routing{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.inputs-bank-routing label{
+    margin-top: 40px;
+}
+
+.account-block-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.modal-fundraising button{
+    cursor: pointer;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    padding: 10px 16px;
+    background-color: #4E008E;
+    margin-top: 30px;
+}
+
+.label-payee{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.block-option2 h3{
+    margin: 7px 0 10px 0;
+}
+
+.block-name-surname label{
+    margin: 0;
+}
+
+.school-organization label, .block-address label, .block-city-state-zip label{
+    margin: 0;
+}
+
+
+.block-name-surname , .block-address , .block-city-state-zip{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/*select*/
+.block-city-state-zip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.form-custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 101%;
+    background: #fff;
+    border: 1px solid #9B9AA5;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    z-index: 10;
+    overflow: hidden;
+    margin-left: -1px;
+}
+
+.block-city-state-zip > label,
+.block-city-state-zip .block-form-select {
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+@media (min-width: 600px) {
+    .block-city-state-zip > label,
+    .block-city-state-zip .block-form-select {
+        flex: 1;
+        max-width: none;
+    }
+}
+
+.block-city-state-zip input {
+    padding: 12px 16px;
+    background-color: #fff;
+    border: 1px solid #9B9AA5;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+    .modal-fundraising{
+        width: 98%;
+        left: 1%;
+    }
+    .modal-fundraising h1{
+        white-space: normal;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-fundraising{
+        width: 98%;
+        left: 1%;
+        padding: 10px;
+    }
+    .scroll-modal-fundraising{
+        height: fit-content;
+    }
+}
+
+/*Scrollbar*/
+.scroll-modal-fundraising::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-modal-fundraising::-webkit-scrollbar-track {
+    background: #f7f3fa;
+    border-radius: 10px;
+}
+
+.scroll-modal-fundraising::-webkit-scrollbar-thumb {
+    background-color: #bfc3c5;
+    border-radius: 10px;
+}
+
+.scroll-modal-fundraising* {
+    scrollbar-width: thin;
+    scrollbar-color: #bfc3c5 #f7f3fa;
+}

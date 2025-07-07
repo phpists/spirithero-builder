@@ -6,6 +6,7 @@ import './modals/modal-products/ModalProducts.css';
 import stepsData from '../../data/stepsData';
 import ModalProducts from './modals/modal-products/ModalProducts';
 import ModalDesign from './modals/modal-design/ModalDesign';
+import ModalFundraising from './modals/modal-fundraising/ModalFundraising';
 import { useNavigate , useLocation} from 'react-router-dom';
 
 function Header() {
@@ -15,6 +16,7 @@ function Header() {
 
     const [modalProductsVisible , setModalProductsVisible] = useState(false);
     const [modalDesignVisible , setModalDesignVisible] = useState(false);
+    const [modalFundraisingVisible , setModalFundraisingVisible] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -28,6 +30,8 @@ function Header() {
             setModalProductsVisible(!modalProductsVisible);
         }else if(location.pathname === '/Design'){
             setModalDesignVisible(!modalDesignVisible)
+        }else if(location.pathname === '/Fundraising'){
+            setModalFundraisingVisible(!modalFundraisingVisible);
         }else{
             console.log(location.pathname)
         }
@@ -63,6 +67,11 @@ function Header() {
             {modalDesignVisible &&
                 <div>
                     <ModalDesign handleModalView={handleModalView} />
+                </div>
+            }
+            {modalFundraisingVisible &&
+                <div>
+                    <ModalFundraising handleModalView={handleModalView} />
                 </div>
             }
         </div>
