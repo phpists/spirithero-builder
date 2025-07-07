@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ProductPreview.css';
 import ModalColors from './modal-colors/ModalColors';
+import ShadowBlock from '../../../components/ShadowBlock';
 
 const initialProducts = [
     {
@@ -96,6 +97,7 @@ const ProductCard = ({ product, onDelete }) => {
                 </div>
             </div>
             {modalVisible && <ModalColors handleModalVisible={handleModalVisible} />}
+            {modalVisible && <ShadowBlock handleModalView={handleModalVisible} />}
         </div>
     );
 };

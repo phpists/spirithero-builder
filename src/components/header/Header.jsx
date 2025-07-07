@@ -7,16 +7,17 @@ import stepsData from '../../data/stepsData';
 import ModalProducts from './modals/modal-products/ModalProducts';
 import ModalDesign from './modals/modal-design/ModalDesign';
 import ModalFundraising from './modals/modal-fundraising/ModalFundraising';
-import { useNavigate , useLocation} from 'react-router-dom';
+import ShadowBlock from '../ShadowBlock';
+import {useNavigate, useLocation} from 'react-router-dom';
 
 function Header() {
     const totalSteps = stepsData.length;
     const [currentStep, setCurrentStep] = useState(1);
     const [completedSteps, setCompletedSteps] = useState([]);
 
-    const [modalProductsVisible , setModalProductsVisible] = useState(false);
-    const [modalDesignVisible , setModalDesignVisible] = useState(false);
-    const [modalFundraisingVisible , setModalFundraisingVisible] = useState(false);
+    const [modalProductsVisible, setModalProductsVisible] = useState(false);
+    const [modalDesignVisible, setModalDesignVisible] = useState(false);
+    const [modalFundraisingVisible, setModalFundraisingVisible] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,13 +27,13 @@ function Header() {
     };
 
     const handleModalView = () => {
-        if(location.pathname === '/Products'){
+        if (location.pathname === '/Products') {
             setModalProductsVisible(!modalProductsVisible);
-        }else if(location.pathname === '/Design'){
+        } else if (location.pathname === '/Design') {
             setModalDesignVisible(!modalDesignVisible)
-        }else if(location.pathname === '/Fundraising'){
+        } else if (location.pathname === '/Fundraising') {
             setModalFundraisingVisible(!modalFundraisingVisible);
-        }else{
+        } else {
             console.log(location.pathname)
         }
     };
@@ -59,20 +60,25 @@ function Header() {
                 onSaveExit={onSaveExit}
             />
 
+            {
+                modalProductsVisible || modalDesignVisible || modalFundraisingVisible ?
+                <ShadowBlock handleModalView={handleModalView} /> : false
+            }
+
             {modalProductsVisible &&
-                <div className="modal-products">
-                    <ModalProducts handleModalView={handleModalView} />
-                </div>
+            <div className="modal-products">
+                <ModalProducts handleModalView={handleModalView}/>
+            </div>
             }
             {modalDesignVisible &&
-                <div>
-                    <ModalDesign handleModalView={handleModalView} />
-                </div>
+            <div>
+                <ModalDesign handleModalView={handleModalView}/>
+            </div>
             }
             {modalFundraisingVisible &&
-                <div>
-                    <ModalFundraising handleModalView={handleModalView} />
-                </div>
+            <div>
+                <ModalFundraising handleModalView={handleModalView}/>
+            </div>
             }
         </div>
     );

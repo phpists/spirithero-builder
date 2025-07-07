@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./SalePriceInfo.css";
 import ModalAmountColors from '../modal/ModalAmountColors';
+import ShadowBlock from '../../../components/ShadowBlock';
 
 function SalePriceInfo() {
     const [isChecked, setIsChecked] = useState(false);
@@ -83,6 +84,7 @@ function SalePriceInfo() {
                 )
             }
             {modalAmountColorsVisible && <ModalAmountColors handleModalAmountColorsVisible={handleModalAmountColorsVisible} />}
+            {modalAmountColorsVisible && <ShadowBlock handleModalView={handleModalAmountColorsVisible} />}
         </div>
     );
 }
