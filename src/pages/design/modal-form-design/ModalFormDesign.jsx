@@ -5,6 +5,9 @@ import ButtonClose from '../../../components/ButtonClose';
 
 function ModalFormDesign({closeModalFormDesign}) {
     const [activeCardIndex, setActiveCardIndex] = useState(null);
+    const [selectedColorIndex, setSelectedColorIndex] = useState(null);
+
+
     const dataCards = [
         {
             name: 'Mascot Aggressive look.',
@@ -114,7 +117,8 @@ function ModalFormDesign({closeModalFormDesign}) {
                         <div className="modal-design-block-colors">
                             <p style={{color: '700 !important'}}>2.Select Your Ink Color(s)</p>
                             {colorsData.map((option) => (
-                                <div style={{
+                                <label
+                                    style={{
                                     position: 'relative',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -132,7 +136,7 @@ function ModalFormDesign({closeModalFormDesign}) {
                                         backgroundColor: option.color
                                     }}></div>
                                     <div>{option.name}</div>
-                                </div>))
+                                </label>))
                             }
                         </div>
                         <div className="block-forms-text-photos">
