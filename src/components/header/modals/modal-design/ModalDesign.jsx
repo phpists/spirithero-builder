@@ -1,5 +1,5 @@
 import IconI from '../icons/IconI';
-import Button from '../icons/ButtonClose';
+import Button from '../../../ButtonClose';
 import './ModalDesignStyles.css';
 
 function ModalDesign({handleModalView}) {

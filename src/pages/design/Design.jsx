@@ -4,15 +4,21 @@ import Slider from './Slider';
 import ProductPreview from './product-preview/ProductPreview';
 import ActionDesign from './actions-design/ActionDesign';
 import IcoComplete from './IconComplete';
+import ModalFormDesign from './modal-form-design/ModalFormDesign';
+import ShadowBlock from '../../components/ShadowBlock';
 
 function Design() {
     const [side , setSide] = useState(true);
     const [activeButton, setActiveButton] = useState('image');
+    const [modalFormDesign, setModalFormDesign] = useState(false);
 
     const closeModalTemplates = () => setActiveButton(false);
+    const closeModalFormDesign = () => setModalFormDesign(!modalFormDesign);
 
     return (
         <div className="design">
+            {modalFormDesign && <ModalFormDesign closeModalFormDesign={closeModalFormDesign} />}
+            {modalFormDesign && <ShadowBlock handleModalView={closeModalFormDesign} />}
             <div className="block-product">
                 <div className="block-button-back" onClick={() => setSide(!side)}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +41,7 @@ function Design() {
                 <Slider side={side} />
             </div>
             <div className="block-design">
-                <button>
+                <button onClick={closeModalFormDesign}>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_4599_113641)">
                             <path d="M8 12.0003C8 11.6025 8.15803 11.2209 8.43934 10.9396C8.72064 10.6583 9.10217 10.5003 9.5 10.5003H12.3881C12.7279 10.5004 13.0576 10.3851 13.3233 10.1733C13.589 9.96156 13.7749 9.66588 13.8506 9.33468C13.9539 8.87993 14.004 8.41473 14 7.94843C13.9719 4.64718 11.24 1.96718 7.9375 2.0003C6.35706 2.01677 4.84694 2.65617 3.7352 3.77961C2.62347 4.90305 1.99991 6.41978 2 8.0003C2 10.6134 3.67062 12.5903 6 13.4134C6.22616 13.4934 6.4682 13.5179 6.70581 13.485C6.94342 13.4521 7.16967 13.3627 7.36558 13.2243C7.56149 13.0859 7.72135 12.9025 7.83174 12.6895C7.94212 12.4765 7.99983 12.2402 8 12.0003Z" stroke="#FCFCFC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

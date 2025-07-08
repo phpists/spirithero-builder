@@ -1,5 +1,5 @@
 import './ModalProducts.css';;
-import ButtonClose from '../icons/ButtonClose';
+import ButtonClose from '../../../ButtonClose';
 import IconClose from '../icons/IconClose';
 import IconComplete from '../icons/IconComplete';
 

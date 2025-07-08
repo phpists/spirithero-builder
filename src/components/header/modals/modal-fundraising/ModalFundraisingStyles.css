@@ -1,6 +1,6 @@
 .modal-fundraising{
     z-index: 9999999999;
-    position: fixed;
+    position: absolute;
     left: calc(50vw - 325px);
     width: 100%;
     max-width: 650px;

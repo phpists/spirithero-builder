@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './ModalFundraisingStyles.css';
-import ButtonClose from '../icons/ButtonClose';
+import ButtonClose from '../../../ButtonClose';
 import IconI from './IconI';
 import IconLogo from './IconLogo';
 
@@ -21,9 +21,7 @@ function ModalFundraising({handleModalView}) {
 
 
     return (
-        <div className="modal-fundraising" style={{
-            top: selected == 'option1' ? 'calc(50vh - 325px)' : '0'
-        }}>
+        <div className="modal-fundraising">
             <IconLogo />
             <div className="block-close-modal-fundraising">
                 <ButtonClose handleModalView={handleModalView} />
