@@ -1,5 +1,6 @@
 import './ModalTemplatesDesignStyles.css';
 import ButtonClose from '../../ButtonClose';
+import buttonESC from '../../../../components/ButtonESC';
 
 function ModalTemplatesDesign({closeModalTemplates}) {
     const templates = [
@@ -52,6 +53,10 @@ function ModalTemplatesDesign({closeModalTemplates}) {
             ],
         },
     ];
+
+    buttonESC(() => {
+        closeModalTemplates();
+    });
 
     return (
         <div className="modal-templates-design">

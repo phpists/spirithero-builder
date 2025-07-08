@@ -15,6 +15,7 @@ function Products() {
     const [activeTab, setActiveTab] = useState('catalog');
     const [page, setPage] = useState(1);
     const [showFilters, setShowFilters] = useState(false);
+    const [listVisible , setListVisible] = useState(true);
 
     const toggleSelect = (id) => {
         setSelectedIds((prev) =>
@@ -25,6 +26,8 @@ function Products() {
     const getProductsToDisplay = () => {
         return activeTab === 'store' ? productsData.myProducts : productsData.products;
     };
+
+    const handleListVisible = () => setListVisible(!listVisible);
 
     return (
         <div style={{position: 'relative'}}>
@@ -54,19 +57,19 @@ function Products() {
                 </div>
 
                 <div className="block-cards-products">
-                    {activeTab === 'store' && <HorizontalContainer />}
-                    <div className="block-card">
-                        {getProductsToDisplay().map((product) => (
-                            <ProductCard
-                                key={product.id}
-                                product={product}
-                                isChecked={selectedIds.includes(product.id)}
-                                onToggle={toggleSelect}
-                                activeTab={activeTab}
-                            />
-                        ))}
-                    </div>
-                    {activeTab === 'store' && <HorizontalContainer />}
+                    {activeTab === 'store' && <HorizontalContainer setListVisible={handleListVisible} />}
+                        <div className="block-card">
+                            {listVisible && getProductsToDisplay().map((product) => (
+                                <ProductCard
+                                    key={product.id}
+                                    product={product}
+                                    isChecked={selectedIds.includes(product.id)}
+                                    onToggle={toggleSelect}
+                                    activeTab={activeTab}
+                                />
+                            ))}
+                        </div>
+                    {activeTab === 'store' && <HorizontalContainer setListVisible={handleListVisible} />}
 
                     <div className="block-pagination">
                         {activeTab !== 'store' && <Pagination currentPage={page} totalPages={9} onPageChange={setPage} activeTab={activeTab} />}

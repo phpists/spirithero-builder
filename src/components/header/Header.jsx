@@ -8,6 +8,7 @@ import ModalProducts from './modals/modal-products/ModalProducts';
 import ModalDesign from './modals/modal-design/ModalDesign';
 import ModalFundraising from './modals/modal-fundraising/ModalFundraising';
 import ShadowBlock from '../ShadowBlock';
+import buttonESC from '../ButtonESC';
 import {useNavigate, useLocation} from 'react-router-dom';
 
 function Header() {
@@ -37,6 +38,12 @@ function Header() {
             console.log(location.pathname)
         }
     };
+
+    buttonESC(() => {
+        setModalProductsVisible(false);
+        setModalDesignVisible(false);
+        setModalFundraisingVisible(false);
+    });
 
     return (
         <div className="header-block">

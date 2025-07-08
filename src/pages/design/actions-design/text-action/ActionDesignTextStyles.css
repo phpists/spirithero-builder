@@ -53,15 +53,45 @@
     width: 122px;
 }
 
-.block-color-text-design {
-    width: 24px;
-    height: 24px;
-    background-color: #76DC5A;
+.radio-color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.colors-block{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 10px;
+}
+
+@media (max-width: 470px) {
+    .colors-block{
+        flex-direction: column;
+    }
+}
+
+.radio-color-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-color-option input[type="radio"] {
+    display: none;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 5px solid #fff;
-    outline: 3px solid #CACACA;
-    outline-offset: -3px;
-    margin: 10px auto;
+    border: 2px solid #fff;
+    display: inline-block;
 }
 
 .block-agree-text{
@@ -105,15 +135,106 @@
 }
 
 .text-custom-checkbox input:checked + .text-check-mark {
-    border-color: #4E008E;
+    border-color: #ccc;
+    background-color: #ffffff; /* Білий фон */
+}
+
+.text-check-mark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #4E008E; /* Фіолетова галочка */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
 .text-custom-checkbox input:checked + .text-check-mark::after {
-    content: "";
-    width: 15px;
-    height: 5px;
-    border: solid #4E008E;
-    border-width: 0 0 2px 2px;
-    transform: rotate(-45deg);
     display: block;
+}
+
+.text-check-mark {
+    position: relative;
+}
+
+
+.block-fundraising-select {
+    text-align: left;
+    width: 183px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 14px;
+}
+
+.custom-select {
+    position: relative;
+    background: #fff;
+    border: 1px solid #9B9AA5;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-select.open {
+    border-radius: 12px 12px 0 0;
+    border-bottom: none;
+}
+
+.selected-value {
+    pointer-events: none;
+}
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%239B9AA5' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 14px 8px;
+    pointer-events: none;
+}
+
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 101%;
+    min-width: 122px;
+    background: #fff;
+    border: 1px solid #9B9AA5;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    z-index: 10;
+    overflow: hidden;
+    margin-left: -1px;
+}
+
+.custom-option {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.custom-option:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-option.active {
+    font-weight: 600;
+    background-color: #efefef;
+}
+
+.custom-option.last {
+    border-radius: 0 0 12px 12px;
 }

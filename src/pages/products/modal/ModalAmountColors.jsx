@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import './ModalAmoutColors.css';
 import ButtoneClose from './ButtonClose';
+import buttonESC from '../../../components/ButtonESC';
 
 function ModalAmountColors({handleModalAmountColorsVisible}) {
     const [listFrontSideVisible , setListFrontSideVisible] = useState(false);
@@ -21,6 +22,10 @@ function ModalAmountColors({handleModalAmountColorsVisible}) {
         '4 colors',
         '5 colors'
     ];
+
+    buttonESC(() => {
+        handleModalAmountColorsVisible();
+    });
 
     return (
         <div className="modal-amount-colors"
