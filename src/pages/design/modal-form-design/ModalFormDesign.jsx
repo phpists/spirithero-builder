@@ -2,6 +2,7 @@ import {useState} from 'react';
 import CheckBox from './CheckBox';
 import './ModalFormDesignStyles.css';
 import ButtonClose from '../../../components/ButtonClose';
+import buttonESC from '../../../components/ButtonESC';
 
 function ModalFormDesign({closeModalFormDesign}) {
     const [activeCardIndex, setActiveCardIndex] = useState(null);
@@ -85,6 +86,10 @@ function ModalFormDesign({closeModalFormDesign}) {
     const handleActiveCard = (index) => {
         setActiveCardIndex(index);
     };
+
+    buttonESC(() => {
+        closeModalFormDesign();
+    });
 
     return (
         <div className="block-modal-form-design">
@@ -203,7 +208,7 @@ function ModalFormDesign({closeModalFormDesign}) {
                                 <div style={{position: 'relative', left: '-10px', margin: '20px 0'}}>
                                     <CheckBox/>
                                 </div>
-                                <span style={{marginLeft: '40px'}}>By reaching out to us, you agree to our Terms and Conditions</span>
+                                <span style={{marginLeft: '40px'}}>By reaching out to us, you agree to our <span style={{color: '#004147'}}>Terms and Conditions</span></span>
                             </div>
                             <button>Sent Request and Book a Call</button>
                         </div>

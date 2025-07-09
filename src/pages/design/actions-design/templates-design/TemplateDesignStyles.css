@@ -1,0 +1,40 @@
+.template-design-list{
+
+}
+
+.search-template-design-list{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    color: #000;
+}
+
+.search-template-design-list input{
+    border-radius: 8px;
+    border: 1px solid grey;
+    width: 100%;
+    padding: 10px 0 10px 40px;
+    margin: 10px 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.dandruff{
+    position: absolute;
+    left: 10px;
+    top: 40px;
+}
+
+.template-design-images{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.template-design-images img{
+    max-width: 120px;
+    width: 100%;
+}

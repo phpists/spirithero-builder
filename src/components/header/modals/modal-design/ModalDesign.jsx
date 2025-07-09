@@ -1,4 +1,4 @@
-import IconI from '../icons/IconI';
+import IconI from '../../../icons/IconI';
 import Button from '../../../ButtonClose';
 import './ModalDesignStyles.css';
 

@@ -1,7 +1,7 @@
 import './ModalProducts.css';;
 import ButtonClose from '../../../ButtonClose';
-import IconClose from '../icons/IconClose';
-import IconComplete from '../icons/IconComplete';
+import IconClose from '../../../icons/IconClose';
+import IconComplete from '../../../icons/IconComplete';
 
 function ModalProducts({handleModalView}) {
     return (

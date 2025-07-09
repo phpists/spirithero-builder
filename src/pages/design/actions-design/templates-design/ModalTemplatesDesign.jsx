@@ -1,8 +1,13 @@
+import {useState} from 'react';
 import './ModalTemplatesDesignStyles.css';
 import ButtonClose from '../../ButtonClose';
 import buttonESC from '../../../../components/ButtonESC';
+import ModalApply from '../../../../components/modal-apply/ModalApply';
+import ShadowBlock from '../../../../components/ShadowBlock';
 
 function ModalTemplatesDesign({closeModalTemplates}) {
+    const [modalApply , setModalApply] = useState(false);
+
     const templates = [
         { title: "Graduation", number: 123 },
         { title: "Yard Signs", number: 123 },
@@ -54,6 +59,8 @@ function ModalTemplatesDesign({closeModalTemplates}) {
         },
     ];
 
+    const handleModalApply = () => setModalApply(!modalApply);
+
     buttonESC(() => {
         closeModalTemplates();
     });
@@ -81,6 +88,7 @@ function ModalTemplatesDesign({closeModalTemplates}) {
                             {item.data.map((imgPath, idx) => (
                                 <div key={idx} className="block-template-img">
                                     <img
+                                        onClick={handleModalApply}
                                         src={imgPath}
                                         alt={`${item.name} ${idx + 1}`}
                                         className="rounded-lg shadow"
@@ -91,6 +99,15 @@ function ModalTemplatesDesign({closeModalTemplates}) {
                     </div>
                 ))}
             </div>
+            {modalApply && <ModalApply
+                handleModalApply={handleModalApply}
+                logo={'Edit'}
+                title={'Apply this design template to all items?'}
+                text={'Your current design will be removed'}
+                firstButtonText={'Confirm'}
+                secondButtonText='Cancel'
+            />}
+            {modalApply && <ShadowBlock handleModalView={handleModalApply} />}
         </div>
     );
 }

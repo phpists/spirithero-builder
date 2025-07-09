@@ -1,0 +1,76 @@
+.modal-edit{
+    z-index: 99999;
+    position: fixed;
+    left: calc(50vw - 309.5px);
+    top: 200px;
+    width: 619px;
+    border-radius: 12px;
+    border: 1px solid grey;
+    background-color: #fff;
+    padding: 64px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocks-modal-edit{
+    display: flex;
+    flex-direction: row;
+}
+
+.block-modal-edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-modal-edit-close{
+    position: absolute;
+    right: 10px;
+    top: -10px;
+}
+
+.modal-edit h2{
+    width: 150px;
+    margin: 20px auto 10px;
+    font-size: 24px;
+    color: #000;
+    line-height: 30px;
+}
+
+.modal-edit p{
+    width: 220px;
+    text-align: center;
+}
+
+.modal-edit button , .button-cancel-edit{
+    max-width: 194px;
+    width: 100%;
+    position: static;
+    border: 0;
+    margin: 20px 0;
+}
+
+.button-cancel-edit{
+    width: 150px !important;
+    position: static;
+    top: 0;
+    border: 0;
+    background-color: #fff !important;
+    color: #4E008E;
+    border-bottom: 2px solid #4E008E !important;
+    border-radius: 0 !important;
+    padding: 0 0 5px 0 !important;
+}
+
+@media (max-width: 610px) {
+    .modal-edit{
+        width: 97vw;
+        left: 0;
+    }
+    .blocks-modal-edit{
+        flex-direction: column;
+    }
+}

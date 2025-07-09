@@ -1,6 +1,26 @@
+import {useState} from 'react';
+import ModalApply from '../../components/modal-apply/ModalApply';
+import ShadowBlock from '../../components/ShadowBlock';
+
 function HorizontalContainer({setListVisible}) {
+    const [modalApplyVisible , setModalApplyVisible] = useState(false);
+
+    const handleModalApplyVisible = () => setModalApplyVisible(!modalApplyVisible);
+
     return (
         <div className="horizontal-container">
+
+            {modalApplyVisible &&
+                <ModalApply
+                    handleModalApply={handleModalApplyVisible}
+                    logo={'Gallery'}
+                    title={'Choose a collection for your second design'}
+                    text={'You\'ve already added one design to the Standard collection. Please select a collection for Your second design:'}
+                    firstButtonText={'Continue'}
+                    secondButtonText={'Cancel'}
+                />}
+            {modalApplyVisible && <ShadowBlock handleModalView={handleModalApplyVisible} />}
+
             <div style={{width: '50px'}}>
                 <svg onClick={setListVisible} width="24" height="24" viewBox="0 0 24 24" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +34,7 @@ function HorizontalContainer({setListVisible}) {
 
             </div>
             <div className="horizontal-container-info">
-                <div>
+                <div onClick={handleModalApplyVisible}>
                     <p>Standard collection</p>
                     <span>4 items</span>
                 </div>

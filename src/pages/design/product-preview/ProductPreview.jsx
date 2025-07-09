@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ProductPreview.css';
 import ModalColors from './modal-colors/ModalColors';
 import ShadowBlock from '../../../components/ShadowBlock';
+import ModalApply from '../../../components/modal-apply/ModalApply';
 
 const initialProducts = [
     {
@@ -39,8 +40,10 @@ const initialProduct = [
 
 const ProductCard = ({ product, onDelete }) => {
     const [modalVisible, setModalVisible] = useState(false);
+    const [modalApplyVisible, setModalApplyVisible] = useState(false);
 
     const handleModalVisible = () => setModalVisible(!modalVisible);
+    const handleModalApplyVisible = () => setModalApplyVisible(!modalApplyVisible);
 
     return (
         <div className="product-card-preview">
@@ -84,7 +87,7 @@ const ProductCard = ({ product, onDelete }) => {
                 </svg>
             </div>
             <div className="block-button-add-colors">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg onClick={handleModalApplyVisible} width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="#4E008E" strokeWidth="1.5" />
                     <path d="M5.5 8H10.5" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M8 5.5V10.5" stroke="#4E008E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -98,6 +101,16 @@ const ProductCard = ({ product, onDelete }) => {
             </div>
             {modalVisible && <ModalColors handleModalVisible={handleModalVisible} />}
             {modalVisible && <ShadowBlock handleModalView={handleModalVisible} />}
+
+            {modalApplyVisible && <ModalApply
+                handleModalApply={handleModalApplyVisible}
+                logo={'Load'}
+                title={'Your logo is saved! Do you want to create another?'}
+                text={false}
+                firstButtonText={'Yes, create another logo'}
+                secondButtonText={'No, move to the next step'}
+            />}
+            {modalApplyVisible && <ShadowBlock handleModalView={handleModalApplyVisible} />}
         </div>
     );
 };

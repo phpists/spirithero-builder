@@ -10,9 +10,10 @@ import ShadowBlock from '../../components/ShadowBlock';
 function Design() {
     const [side , setSide] = useState(true);
     const [activeButton, setActiveButton] = useState('image');
+    const [templatesModalVisible , setTemplatesModalVisible] = useState(false);
     const [modalFormDesign, setModalFormDesign] = useState(false);
 
-    const closeModalTemplates = () => setActiveButton(false);
+    const closeModalTemplates = () => setTemplatesModalVisible(!templatesModalVisible);
     const closeModalFormDesign = () => setModalFormDesign(!modalFormDesign);
 
     return (
@@ -58,7 +59,7 @@ function Design() {
                     </svg>
                     Request a custom design
                 </button>
-                <h1>Create your DESIGN</h1>
+                <h1 onClick={closeModalTemplates}>Create your DESIGN</h1>
                 <p>Choose options from ready solutions to the custom ones</p>
                 <div className="actions-design">
                     <div
@@ -117,7 +118,7 @@ function Design() {
                     </div>
                 </div>
 
-                <ActionDesign activeButton={activeButton} closeModalTemplates={closeModalTemplates} />
+                <ActionDesign templatesModalVisible={templatesModalVisible} activeButton={activeButton} closeModalTemplates={closeModalTemplates} />
 
                 <ProductPreview />
             </div>

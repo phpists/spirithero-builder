@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './ModalColorsStyles.css';
 import ButtonClose from '../../ButtonClose';
+import buttonESC from '../../../../components/ButtonESC';
 
 const colorOptions = [
     {
@@ -45,6 +46,10 @@ function ModalColors({handleModalVisible}) {
     };
 
     const selectedCount = checkedStates.filter(Boolean).length;
+
+    buttonESC(() => {
+        handleModalVisible();
+    });
 
     return (
         <div className="modal-colors-design">

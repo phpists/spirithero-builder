@@ -123,6 +123,7 @@
     opacity: 0.7;
     width: 100vw;
     height: 100vw;
+    min-height: 100%;
     z-index: 9999;
 }
 
