@@ -35,6 +35,7 @@
 }
 
 .template-design-images img{
+    cursor: pointer;
     max-width: 120px;
     width: 100%;
 }

@@ -35,7 +35,7 @@ function ModalEdit({handleModalView}) {
                         <path d="M30.5039 25.7822V32.0322" stroke="#4E008E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M20.5 18.2812V32.0312" stroke="#FBB041" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                    <h2 style={{margin: '25px 0 10px 0'}}>Sell item at cost</h2>
+                    <h2 style={{margin: '25px 0 10px 0', width: '150px'}}>Sell item at cost</h2>
                     <p style={{width: 'fit-content'}}>Sell item for as low as possible</p>
                     <button>Sell item at cost</button>
                 </div>

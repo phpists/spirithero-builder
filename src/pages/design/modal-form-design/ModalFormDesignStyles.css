@@ -106,6 +106,7 @@
 }
 
 .block-forms-text-photos button {
+    cursor: pointer;
     width: 245px;
     border-radius: 12px;
     background-color: #4E008E;

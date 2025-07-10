@@ -3,10 +3,12 @@ import CheckBox from './CheckBox';
 import './ModalFormDesignStyles.css';
 import ButtonClose from '../../../components/ButtonClose';
 import buttonESC from '../../../components/ButtonESC';
+import ModallCall from './modal-call/ModalCall';
+import ShadowBlock from '../../../components/ShadowBlock';
 
 function ModalFormDesign({closeModalFormDesign}) {
     const [activeCardIndex, setActiveCardIndex] = useState(null);
-    const [selectedColorIndex, setSelectedColorIndex] = useState(null);
+    const [modalCall, setModalCall] = useState(false);
 
 
     const dataCards = [
@@ -91,8 +93,12 @@ function ModalFormDesign({closeModalFormDesign}) {
         closeModalFormDesign();
     });
 
+    const handleModalCall = () => setModalCall(!modalCall);
+
     return (
         <div className="block-modal-form-design">
+            {modalCall && <ModallCall handleModalCall={handleModalCall} />}
+            {modalCall && <ShadowBlock handleModalView={handleModalCall}/>}
             <div style={{position: 'relative',top: '-40px'}}>
                 <ButtonClose handleModalView={closeModalFormDesign}/>
             </div>
@@ -210,7 +216,7 @@ function ModalFormDesign({closeModalFormDesign}) {
                                 </div>
                                 <span style={{marginLeft: '40px'}}>By reaching out to us, you agree to our <span style={{color: '#004147'}}>Terms and Conditions</span></span>
                             </div>
-                            <button>Sent Request and Book a Call</button>
+                            <button onClick={handleModalCall}>Sent Request and Book a Call</button>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,344 @@
+.block-close-modal-call{
+    position: absolute;
+    right: 100px;
+    top: -35px;
+}
+
+.modal-call {
+    max-width: 647px;
+    width: 100%;
+    height: 435px;
+    z-index: 999999;
+    position: fixed;
+    left: calc(50vw - 323.5px);
+    top: calc(50vh - 217.5px);
+    background-color: #fff;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-call {
+    scrollbar-width: thin; /* для Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.modal-call::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-call::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-call::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.modal-call::-webkit-scrollbar-button {
+    display: none;
+}
+
+.img-modal-call{
+    position: absolute;
+    top: 0;
+    left: calc(60% - 30px);
+    width: 30px;
+    height: 15px;
+}
+
+.block-calendly{
+    position: absolute;
+    right: -80px;
+    top: 3px;
+    background-color: grey;
+    color: #fff;
+    transform: rotate(45deg);
+    width: 200px;
+    height: 40px;
+    padding: 0 0 5px 0;
+}
+
+.block-calendly span{
+    font-size: 8px;
+}
+
+.block-calendly p{
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.side-bare-modal-call {
+    width: 40%;
+    height: 435px;
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.side-bare-modal-call img {
+    display: flex;
+    justify-self: left;
+}
+
+.side-bare-modal-call h2 {
+    margin: -10px 0 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.side-bare-modal-call p {
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 12px;
+    color: grey;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.side-bare-modal-call p svg {
+    flex-shrink: 0;
+}
+
+.block-cookie-settings {
+    width: 35%;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-modal-date {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 10px;
+}
+
+.block-modal-date h3 {
+    padding: 0 10px 0 10px;
+    font-size: 14px;
+}
+
+/*date*/
+.day-picker-wrapper,
+.rdp,
+.rdp-months,
+.rdp-month {
+    width: 200px !important;
+    max-width: 200px !important;
+    min-width: 200px !important;
+    box-sizing: border-box;
+    padding: 0 !important;
+}
+
+.rdp-nav {
+    margin-left: 10px !important;
+}
+
+.rdp-month_caption {
+    padding: 0 !important;
+}
+
+.rdp-caption_label {
+    font-size: 12px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    position: static !important;
+    margin-left: 80px !important;
+}
+
+.rdp-weekdays,
+.rdp-week {
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+
+.rdp-day_button {
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 10px !important;
+    padding: 0 !important;
+}
+
+.rdp-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.rdp-chevron {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.rdp-day {
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.rdp-day_button {
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    text-align: center !important;
+}
+
+.rdp-day_selected, .my-selected {
+    background-color: blue !important;
+    color: white !important;
+    border-radius: 50% !important;
+}
+
+.block-time-zone {
+    margin-top: 20px;
+}
+
+.block-time-zone span {
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.block-time-zone p {
+    font-size: 10px;
+    font-weight: 600;
+    color: grey;
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+    padding: 5px 0 0 10px;
+}
+
+.block-button-troubleshoot {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.block-button-troubleshoot button {
+    cursor: pointer;
+    border: 1px solid #000;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: #fff;
+    color: #000;
+    text-indent: 5px;
+}
+
+.block-button-troubleshoot span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+    text-align: center;
+}
+
+.block-times {
+    width: 20%;
+    padding: 55px 5px 30px 5px;
+}
+
+.block-times p {
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+
+.block-time {
+    cursor: pointer;
+    border: 1px solid lightBlue;
+    border-radius: 5px;
+    color: blue;
+    font-weight: 700;
+    padding: 7px 0;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+    .modal-call {
+        flex-direction: column;
+        height: 100vh;
+        left: 0;
+        top: 0;
+    }
+
+    .side-bare-modal-call{
+        width: 100%;
+    }
+
+    .block-modal-date{
+        text-align: center;
+        width: 100%;
+    }
+
+    .day-picker-wrapper{
+        margin: 0 auto !important;
+    }
+
+    .block-cookie-settings {
+        width: auto;
+        flex-direction: column;
+        position: static;
+    }
+
+    .block-time-zone{
+        display: grid;
+        place-items: center;
+    }
+
+    .block-button-troubleshoot {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .block-times{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .block-times p{
+        text-align: center;
+    }
+
+    .times-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+
+
+
