@@ -100,4 +100,8 @@
     .side-bare-templates{
         width: fit-content;
     }
+    .preview-images-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

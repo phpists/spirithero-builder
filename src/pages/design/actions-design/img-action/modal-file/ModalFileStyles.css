@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
+.modal-file{
+    z-index: 99999;
+    position: fixed;
+    left: calc(50vw - 140px);
+    top: calc(50vh - 104px);
+    width: 280px;
+    min-height: 215px;
+    background-color: #fff;
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 54px 24px 24px 24px;
+}
+
+.block-close-file{
+    position: absolute;
+    right: 0;
+    top: -25px;
+
+}
+
+.block-files-modal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.block-new-upload{
+    cursor: pointer;
+    border: 2px solid #4E008E;
+    border-radius: 12px;
+    width: 106px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Poppins-Regular , sans-serif;
+    font-size: 12px;
+    padding: 8px;
+    color: #605767;
+    line-height: 15px;
+}
+
+.block-uploaded-file{
+    cursor: pointer;
+    border: 2px solid #4E008E;
+    border-radius: 12px;
+    width: 106px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Poppins-Regular , sans-serif;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.modal-file button{
+    position: static;
+    margin-top: 5px;
+    margin-left: 160px;
+    background-color: #4E008E;
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    width: 67px;
+}
+
+.add-new-file{
+    border: 1px dashed grey;
+    border-radius: 12px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-group {
+    padding: 12px;
+}
+
+.preview-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.preview-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.preview-image img {
+    width: 57px;
+    height: 57px;
+    object-fit: contain;
+}
+
+.preview-image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.file-name {
+    margin-top: 4px;
+    font-size: 12px;
+    text-align: center;
+    color: #605767;
+    word-break: break-word;
+}
+
+.block-files-modal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+.block-files-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.top-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.files-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+/* Залишаємо стилі для .block-uploaded-file та .block-new-upload без змін */
